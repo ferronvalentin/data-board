@@ -8,10 +8,13 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title %></title>
     <%= stylesheet_link_tag "application" %>
-    <%= favicon_tag 'images/favicon.png' %>
+    <%= favicon_tag 'images/favicon-orizon.png' %>
   </head>
   <body>
-    <%= yield %>
+    <div class="content">
+      <%= partial "navbar" %>
+      <%= yield %>
+    </div>
 
     <%= javascript_include_tag 'application' %>
   </body>

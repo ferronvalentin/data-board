@@ -1,21 +1,6 @@
-// #home {
-//   background-color: #D23333;
-//   color: white;
-//   height: 100vh;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-around;
-//   text-align: center;
-//   p {
-//     margin-top: 1.5em;
-//   }
-//   a {
-//     color: rgba(0,0,0,0.4);
-//     font-weight: bold;
-//     font-size: 16px;
-//   }
-// }
-
+.content {
+	background: linear-gradient(to bottom, #3094f2, #0fc8c3);
+}
 
 /* Header */
 .large-header {
@@ -40,7 +25,7 @@
 	padding: 0;
 	color: #f9f1e9;
 	text-align: center;
-	top: 50%;
+	top: 42%;
 	left: 50%;
 	-webkit-transform: translate3d(-50%,-50%,0);
 	transform: translate3d(-50%,-50%,0);
