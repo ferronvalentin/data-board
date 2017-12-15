@@ -3,3 +3,8 @@
 .DS_Store
 .sass-cache
 build/
+
+public/assets
+
+# Ignore application configuration
+/config/application.yml
