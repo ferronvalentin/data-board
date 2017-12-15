@@ -19,14 +19,25 @@
 #large-header {
 }
 
-// .spirale {
-//   width: 100%;
-//   height: 100vh;
-//   background-image: url("spirale-orizon.svg");
-//   background-position: center top, left top;
-//   background-size: contain, auto;
-//   background-repeat:no-repeat;
-// }
+.spirale {
+  width: 100%;
+  height: 100vh;
+  background-image: url("spirale-orizon.svg");
+  background-position: center top, left top;
+  background-size: contain, auto;
+  background-repeat:no-repeat;
+}
+
+@media only screen and (max-width : 768px) {
+	.spirale {
+		width: 100%;
+		height: 100vh;
+		background-image: url("spirale-orizon.svg");
+		background-position: center;
+		background-size: cover;
+		background-repeat:no-repeat;
+	}
+}
 
 .main-title {
 	position: absolute;
