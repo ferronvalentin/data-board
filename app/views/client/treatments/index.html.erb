@@ -1,0 +1,47 @@
+<div class="treatments">
+  <div class="treatments-title">
+    <h1>Mes traitements de données personnelles</h1>
+    <%= link_to "Ajouter un traitement", new_client_treatment_path, class: "btn-add-treatment" %>
+  </div>
+
+  <div class="treatments-content">
+    <div class="treatments-header">
+      <div class="col5 col-sm-6">
+        <p>Nom du traitement</p>
+      </div>
+      <div class="col5 col-sm-6">
+        <p>Date de démarrage</p>
+      </div>
+      <div class="col5 col-sm-6">
+        <p>Finalité principale</p>
+      </div>
+      <div class="col5 col-sm-6">
+        <p>Service concerné</p>
+      </div>
+      <div class="col5 col-sm-6">
+        <p> </p>
+      </div>
+    </div>
+
+    <% @treatments.each do |treatment| %>
+      <div class="treatment">
+        <div class="col5 col-sm-6">
+          <p><%= treatment.name %></p>
+        </div>
+        <div class="col5 col-sm-6">
+          <p><%= treatment.start_date %></p>
+        </div>
+        <div class="col5 col-sm-6">
+          <p><%= treatment.main_purpose %></p>
+        </div>
+        <div class="col5 col-sm-6">
+          <p><%= treatment.service_concerned %></p>
+        </div>
+        <div class="col5 col-sm-6">
+          <%= link_to "Voir", client_treatment_path(treatment), class: "btn-treatment" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+</div>

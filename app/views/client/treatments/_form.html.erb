@@ -1,0 +1,47 @@
+<div class="form-instrument">
+  <%= simple_form_for [:client, @treatment] do |t| %>
+    <div class="form-inputs">
+      <div class="col-md-4 col-md-offset-4">
+        <%= t.input :name %>
+      </div>
+      <div class="col-md-4 col-md-offset-4">
+        <%= t.input :start_date %>
+      </div>
+      <div class="col-md-4 col-md-offset-4">
+        <%= t.input :main_purpose %>
+      </div>
+      <div class="col-md-4 col-md-offset-4">
+        <%= t.input :other_purpose %>
+      </div>
+      <div class="col-md-4 col-md-offset-4">
+        <%= t.input :service_concerned %>
+      </div>
+      <div class="col-md-4 col-md-offset-4">
+        <%= t.input :service_function %>
+      </div>
+      <div class="col-md-4 col-md-offset-4">
+        <%= t.input :category_people_concerned %>
+      </div>
+      <div class="col-md-4 col-md-offset-4">
+        <%= t.input :personal_data %>
+      </div>
+      <div class="col-md-4 col-md-offset-4">
+        <%= t.input :sensitive_data %>
+      </div>
+      <div class="col-md-4 col-md-offset-4">
+        <%= t.input :recipient %>
+      </div>
+      <div class="col-md-4 col-md-offset-4">
+        <%= t.input :storage_time %>
+      </div>
+      <div class="col-md-4 col-md-offset-4">
+        <%= t.input :observation %>
+      </div>
+      <div class="col-md-4 col-md-offset-4 center-btn">
+        <div class="form-actions">
+          <%= t.submit 'Done', class: 'btn btn-primary' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

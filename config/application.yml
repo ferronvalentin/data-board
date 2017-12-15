@@ -1,0 +1,4 @@
+production:
+  RAILS_ENV: "production"
+  SECRET_KEY_BASE: "56f337e5df44396e5bb566d557f969738adecd2c3730e96a58f5fa8027b36b8cbc77bc9b201363abdc6e7a13abdf87bc70d7d60de09bb865074349180d8909e7"
+  STATIC_FILES_PATH: "/public/"

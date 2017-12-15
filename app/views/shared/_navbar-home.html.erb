@@ -1,0 +1,18 @@
+<div class="navbar-orizon-home">
+  <!-- Right Navigation -->
+  <div class="navbar-orizon-home-right hidden-xs hidden-sm">
+    <a href="" class="navbar-orizon-home-item navbar-orizon-home-link">Nous contacter</a>
+    <%= link_to t(".sign_in", default: "Connexion"), new_user_session_path, class: "navbar-orizon-home-item navbar-orizon-home-link-connexion" %>
+  </div>
+
+  <!-- Dropdown appearing on mobile only -->
+  <div class="navbar-orizon-home-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-orizon-home-dropdown-menu">
+        <li><a href="#">Nous contacter</a></li>
+        <li><a href="#">Connexion</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
