@@ -100,14 +100,41 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+	.text-1 {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+	.text-2 {
+		margin-bottom: 55px;
+		padding-left: 15%;
+		padding-right: 15%;
+	}
 }
 
+@media only screen and (max-width : 768px) {
+	.content-center {
+		.text-1 {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.text-2 {
+			margin-bottom: 25px;
+			padding-left: 0;
+			padding-right: 0;
+		}
+		h1 {
+			font-size: 21px;
+		}
+	}
+}
+
+
 h1 {
-	text-align: center;
-	font-size: 35px;
-	padding-right: 25px;
-	padding-left: 25px;
-	color: #475151;
+	font-style: Montserrat;
+  font-style: bolder;
+  color: $text-header;
+  font-size: 26px;
+  text-align: center;
 	padding-bottom: 10px;
 	.blue {
 		color: #2995ec;
@@ -122,12 +149,11 @@ h2 {
 	padding-bottom: 10px;
 }
 h3 {
-	text-align: center;
-	font-size: 18px;
-	padding-right: 25px;
-	padding-left: 25px;
-	color: #475151;
-	padding-bottom: 35px;
+	font-style: Montserrat;
+  font-style: lighter;
+  color: $text;
+  font-size: 16px;
+  text-align: center;
 }
 
 .mini-feature {
@@ -160,12 +186,12 @@ h3 {
   background-color: rgb(255,255,255);
   width: 100%;
 	h1 {
-		text-align: center;
-		font-size: 35px;
-		padding-right: 25px;
-		padding-left: 25px;
-		color: #475151;
-		padding-bottom: 10px;
+		font-style: Montserrat;
+	  font-style: bolder;
+	  color: $text-header;
+	  font-size: 26px;
+	  text-align: center;
+		padding-bottom: 25px;
 		.blue {
 			color: #2995ec;
 		}
@@ -180,53 +206,33 @@ h3 {
 		padding-bottom: 10px;
 	}
 	h3 {
-		text-align: center;
-		font-size: 18px;
-		padding-right: 25px;
-		padding-left: 25px;
-		color: #475151;
+		font-style: Montserrat;
+    font-style: bolder;
+    color: $text-header;
+    font-size: 20px;
+    text-align: center;
 		padding-bottom: 14px;
+	}
+	p {
+		font-style: Montserrat;
+    font-style: lighter;
+    color: $text;
+    font-size: 16px;
+    text-align: center;
 	}
 }
 
-.sanction {
-	display: flex;
-	justify-content: center;
-	padding-top: 30px;
-	.card-sanction {
-		padding-top: 40px;
-		background-color: white;
-		box-shadow: 0 23px 40px rgba(0, 0, 0, 0.2);
-		border-radius: 6px;
-		border: 1px solid #ececec;
-		height: 320px;
-		width: 325px;
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
-		flex-direction: column;
-		ul {
-			padding-left: 60px;
-			padding-right: 30px;
-		}
-		li {
-			font-size: 13px;
-		}
-		p {
-			font-size: 13px;
-		}
-		.sanctions-financières {
-			padding-left: 36px;
-		}
-	}
-}
 
 //Banner 4 - Notre plateforme
 .banner-plateforme-feature {
   flex-grow: 1;
-  width: 90%;
+  width: 98%;
   display: flex;
   align-items: center;
+}
+
+.banner-plateforme-feature-text {
+	margin-left: 5%;
 }
 
 .third-step-content {
@@ -235,29 +241,43 @@ h3 {
   background-color: $banner-gray;
   width: 100%;
 	h1 {
-		text-align: center;
-		font-size: 35px;
-		padding-right: 25px;
-		padding-left: 25px;
-		color: #475151;
-		padding-bottom: 10px;
+		font-style: Montserrat;
+	  font-style: bolder;
+	  color: $text-header;
+	  font-size: 26px;
+	  text-align: center;
+		padding-bottom: 25px;
 	}
+	.feature {
+		h1 {
+			margin-left: 10px;
+			text-align: left;
+			font-style: bolder;
+		  color: $text-header;
+		  font-size: 22px;
+			padding-bottom: 10px;
+		}
+		p {
+			font-style: Montserrat;
+	    font-style: lighter;
+	    color: $text;
+	    font-size: 16px;
+		}
+	}
+	.feature-header {
+		display: flex;
+		align-items: center;
+		img {
+			width: 30px;
+			height: 30px;
+		}
+	}
+}
 
-	h2 {
-		text-align: center;
-		font-size: 20px;
-		padding-right: 25px;
-		padding-left: 25px;
-		color: #475151;
-		padding-bottom: 10px;
-	}
-	h3 {
-		text-align: center;
-		font-size: 18px;
-		padding-right: 25px;
-		padding-left: 25px;
-		color: #475151;
-		padding-bottom: 14px;
+.banner-plateforme-feature-photo {
+	img {
+		width: 100%;
+		height: auto;
 	}
 }
 
