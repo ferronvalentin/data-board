@@ -32,7 +32,7 @@
 }
 
 .btn-contact {
-  // margin-left: 20px;
+  border: none;
   padding: 10px 22px;
   background-color: $blue-orizon;
   color: white !important;
@@ -52,4 +52,10 @@
       text-decoration: none;
     }
   }
+}
+
+.btn-contact-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 45px;
 }
