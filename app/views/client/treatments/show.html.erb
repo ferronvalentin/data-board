@@ -1,0 +1,125 @@
+<div class="treatment-show">
+  <div class="col-lg-6">
+    <div class="treatment-show-header">
+      <div class="treatment-show-return">
+        <%= link_to client_treatments_path do %>
+          <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        <% end %>
+      </div>
+      <div class="treatment-show-header-text">
+        <h1>Informations</h1>
+      </div>
+    </div>
+
+    <div class="treatment-show-content">
+      <div class="treatment-item">
+        <div class="treatment-label">
+          Nom du traitement :
+        </div>
+        <div class="treatment-content">
+          <%= @treatment.name %>
+        </div>
+      </div>
+      <div class="treatment-item">
+        <div class="treatment-label">
+          Date de démarrage :
+        </div>
+        <div class="treatment-content">
+          <%= @treatment.start_date %>
+        </div>
+      </div>
+      <div class="treatment-item">
+        <div class="treatment-label">
+          Objectif principal :
+        </div>
+        <div class="treatment-content">
+          <%= @treatment.main_purpose %>
+        </div>
+      </div>
+      <div class="treatment-item">
+        <div class="treatment-label">
+          Autres objectifs :
+        </div>
+        <div class="treatment-content">
+          <%= @treatment.other_purpose %>
+        </div>
+      </div>
+      <div class="treatment-item">
+        <div class="treatment-label">
+          Service concerné :
+        </div>
+        <div class="treatment-content">
+          <%= @treatment.service_concerned %>
+        </div>
+      </div>
+      <div class="treatment-item">
+        <div class="treatment-label">
+          Fonction du service :
+        </div>
+        <div class="treatment-content">
+          <%= @treatment.service_function %>
+        </div>
+      </div>
+      <div class="treatment-item">
+        <div class="treatment-label">
+          Catégories de personnes concernées :
+        </div>
+        <div class="treatment-content">
+          <%= @treatment.category_people_concerned %>
+        </div>
+      </div>
+      <div class="treatment-item">
+        <div class="treatment-label">
+          Données personnelles récoltées :
+        </div>
+        <div class="treatment-content">
+          <%= @treatment.category_people_concerned %>
+        </div>
+      </div>
+      <div class="treatment-item">
+        <div class="treatment-label">
+          Données personnelles sensibles :
+        </div>
+        <div class="treatment-content">
+          <%= @treatment.sensitive_data %>
+        </div>
+      </div>
+      <div class="treatment-item">
+        <div class="treatment-label">
+          Destinataire :
+        </div>
+        <div class="treatment-content">
+          <%= @treatment.recipient %>
+        </div>
+      </div>
+      <div class="treatment-item">
+        <div class="treatment-label">
+          Temps de conservation des données :
+        </div>
+        <div class="treatment-content">
+          <%= @treatment.storage_time %>
+        </div>
+      </div>
+      <div class="treatment-item">
+        <div class="treatment-label">
+          Observations :
+        </div>
+        <div class="treatment-content">
+          <%= @treatment.observation %>
+        </div>
+      </div>
+    </div>
+
+    <div class="btns-treatment">
+      <% if current_user == @treatment.user %>
+        <div class="edit">
+          <%= link_to "EDITER", edit_client_treatment_path(@treatment), class: "btn-edit" %>
+        </div>
+        <div class="delete">
+          <%= link_to "SUPPRIMER", client_treatment_path(@treatment), method: :delete, class: "btn-delete" %>
+        </div>
+      <% end %>
+    </div>
+
+  </div>
+</div>

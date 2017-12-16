@@ -24928,3 +24928,2397 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 142ms (Views: 133.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-12-16 16:26:07 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (23.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (4.6ms)
+  Rendered shared/_navbar-home.html.erb (20.3ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 812ms (Views: 804.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-16 16:27:00 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (12.1ms)
+  Rendered shared/_navbar-home.html.erb (1.6ms)
+  Rendered shared/_flashes.html.erb (1.4ms)
+Completed 200 OK in 13797ms (Views: 13788.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-16 16:27:19 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (107.5ms)
+Completed 200 OK in 282ms (Views: 172.6ms | ActiveRecord: 46.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-16 16:28:38 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (4.3ms)
+  Rendered shared/_navbar-home.html.erb (1.9ms)
+  Rendered shared/_flashes.html.erb (1.2ms)
+Completed 200 OK in 9863ms (Views: 9858.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-16 16:29:17 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.7ms)
+  Rendered shared/_navbar-home.html.erb (1.7ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 10579ms (Views: 10576.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-16 16:33:12 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (11.6ms)
+  Rendered shared/_navbar-home.html.erb (1.8ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 11100ms (Views: 11090.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-16 16:34:00 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (5.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (54.3ms)
+Completed 200 OK in 178ms (Views: 155.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-12-16 16:34:46 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RM0QBoG6rc2Ynz2HmLWcFBB1/OLRiyONCfMnf/PAzU+wBhh+qEUjhYyTD7gBkZKS0n5ZXcNq4JBdOBBOZS/O/A==", "user"=>{"email"=>"val@orizon.co", "password"=>"[FILTERED]"}, "commit"=>"Connexion"}
+  [1m[36mUser Load (50.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "val@orizon.co"], ["LIMIT", 1]]
+  [1m[35m (6.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (13.0ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["current_sign_in_at", "2017-12-16 15:34:47.285538"], ["sign_in_count", 2], ["updated_at", "2017-12-16 15:34:47.302139"], ["id", 1]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/client/treatments
+Completed 302 Found in 367ms (ActiveRecord: 72.4ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 16:34:47 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (23.6ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (67.4ms)
+  Rendered shared/_sidebar.html.erb (1.2ms)
+  Rendered shared/_navbar.html.erb (3.2ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 198ms (Views: 121.5ms | ActiveRecord: 27.0ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 16:35:03 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.4ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (3.6ms)
+  Rendered shared/_sidebar.html.erb (0.6ms)
+  Rendered shared/_navbar.html.erb (2.3ms)
+  Rendered shared/_flashes.html.erb (0.7ms)
+Completed 200 OK in 69ms (Views: 62.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/client/treatments/new" for 127.0.0.1 at 2017-12-16 16:35:07 +0100
+Processing by Client::TreatmentsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/new.html.erb within layouts/application
+  Rendered client/treatments/_form.html.erb (57.6ms)
+  Rendered client/treatments/new.html.erb within layouts/application (61.8ms)
+  Rendered shared/_sidebar.html.erb (0.9ms)
+  Rendered shared/_navbar.html.erb (2.6ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 182ms (Views: 146.1ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/client/treatments" for 127.0.0.1 at 2017-12-16 16:35:30 +0100
+Processing by Client::TreatmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RB1N8rlosKu6artACpJXwg5mfVY/jyuaawNTTTWdAibIKu7fzQRvVsEkOgb5lvbQQMzUatrfV3Zrv0zIph0o+Q==", "treatment"=>{"name"=>"Premier traitement de données", "start_date(1i)"=>"2017", "start_date(2i)"=>"12", "start_date(3i)"=>"16", "main_purpose"=>"Essai 1", "other_purpose"=>"", "service_concerned"=>"Maison", "service_function"=>"", "category_people_concerned"=>"", "personal_data"=>"", "sensitive_data"=>"", "recipient"=>"", "storage_time(1i)"=>"2017", "storage_time(2i)"=>"12", "storage_time(3i)"=>"16", "observation"=>""}, "commit"=>"Done"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (31.4ms)[0m  [1m[32mINSERT INTO "treatments" ("user_id", "name", "start_date", "main_purpose", "other_purpose", "service_concerned", "service_function", "category_people_concerned", "personal_data", "sensitive_data", "recipient", "storage_time", "observation", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["user_id", 1], ["name", "Premier traitement de données"], ["start_date", "2017-12-16"], ["main_purpose", "Essai 1"], ["other_purpose", ""], ["service_concerned", "Maison"], ["service_function", ""], ["category_people_concerned", ""], ["personal_data", ""], ["sensitive_data", ""], ["recipient", ""], ["storage_time", "2017-12-16"], ["observation", ""], ["created_at", "2017-12-16 15:35:30.098353"], ["updated_at", "2017-12-16 15:35:30.098353"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/client/treatments.2
+Completed 302 Found in 49ms (ActiveRecord: 32.4ms)
+
+
+Started GET "/client/treatments.2" for 127.0.0.1 at 2017-12-16 16:35:30 +0100
+Processing by Client::TreatmentsController#index as 
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (4.6ms)
+  Rendered shared/_sidebar.html.erb (0.7ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 163ms (Views: 136.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/client/treatments/2" for 127.0.0.1 at 2017-12-16 16:36:29 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 231ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionController::UnknownFormat (Client::TreatmentsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.0.6) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
+actionpack (5.0.6) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.0.6) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.0.6) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.6) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.6) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.6) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.6) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.6) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.6) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.6) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.6) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.6) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.6) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.6) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.6) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.6) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.6) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.6) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.6) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.6) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.6) lib/action_dispatch/routing/route_set.rb:727:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.6) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.6) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.6) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.6) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (135.4ms)
+Started GET "/client/treatments/2" for 127.0.0.1 at 2017-12-16 16:37:43 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.9ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 323ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionController::UnknownFormat (Client::TreatmentsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.0.6) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
+actionpack (5.0.6) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.0.6) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.0.6) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.6) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.6) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.6) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.6) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.6) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.6) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.6) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.6) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.6) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.6) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.6) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.6) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.6) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.6) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.6) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.6) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.6) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.6) lib/action_dispatch/routing/route_set.rb:727:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.6) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.6) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.6) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.6) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.6ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (204.8ms)
+Started GET "/client/treatments/2" for 127.0.0.1 at 2017-12-16 16:38:33 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.6ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (1.1ms)
+  Rendered shared/_sidebar.html.erb (2.9ms)
+  Rendered shared/_navbar.html.erb (15.5ms)
+  Rendered shared/_flashes.html.erb (1.8ms)
+Completed 200 OK in 130ms (Views: 118.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 16:45:28 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.8ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (17.3ms)
+  Rendered shared/_sidebar.html.erb (1.3ms)
+  Rendered shared/_navbar.html.erb (4.3ms)
+  Rendered shared/_flashes.html.erb (1.4ms)
+Completed 200 OK in 131ms (Views: 98.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/client/treatments/2" for 127.0.0.1 at 2017-12-16 16:45:41 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (1.1ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (0.6ms)
+  Rendered shared/_sidebar.html.erb (1.0ms)
+  Rendered shared/_navbar.html.erb (2.6ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 66ms (Views: 50.8ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 16:46:40 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.9ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (287.8ms)
+  Rendered shared/_sidebar.html.erb (2.1ms)
+  Rendered shared/_navbar.html.erb (6.2ms)
+  Rendered shared/_flashes.html.erb (1.3ms)
+Completed 200 OK in 430ms (Views: 392.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 16:46:57 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (6.3ms)
+  Rendered shared/_sidebar.html.erb (0.8ms)
+  Rendered shared/_navbar.html.erb (2.2ms)
+  Rendered shared/_flashes.html.erb (0.7ms)
+Completed 200 OK in 69ms (Views: 59.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 16:47:06 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.4ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (646.4ms)
+Completed 500 Internal Server Error in 666ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `treatment' for #<#<Class:0x00007fdf2edef7f0>:0x00007fdf2aeefcf8>
+Did you mean?  @treatments):
+    41:         </div>
+    42:       </div>
+    43:     <% end %>
+    44:     <%= link_to "Voir", client_treatment_path(treatment), class: "btn-treatment" %>
+    45:   </div>
+    46: 
+    47: </div>
+  
+app/views/client/treatments/index.html.erb:44:in `_app_views_client_treatments_index_html_erb___4154443192886403876_70298246095460'
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (118.5ms)
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 16:47:16 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (3.0ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (6.6ms)
+  Rendered shared/_sidebar.html.erb (1.0ms)
+  Rendered shared/_navbar.html.erb (3.4ms)
+  Rendered shared/_flashes.html.erb (1.3ms)
+Completed 200 OK in 105ms (Views: 95.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/client/treatments/new" for 127.0.0.1 at 2017-12-16 16:49:42 +0100
+Processing by Client::TreatmentsController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/new.html.erb within layouts/application
+  Rendered client/treatments/_form.html.erb (63.4ms)
+  Rendered client/treatments/new.html.erb within layouts/application (71.1ms)
+  Rendered shared/_sidebar.html.erb (1.2ms)
+  Rendered shared/_navbar.html.erb (4.3ms)
+  Rendered shared/_flashes.html.erb (1.3ms)
+Completed 200 OK in 188ms (Views: 157.0ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/client/treatments" for 127.0.0.1 at 2017-12-16 16:50:01 +0100
+Processing by Client::TreatmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d1/KPdopHwINz2Sn27lGjtoH8sPec4BNl1FEjo4gkJD7aGkQrkXA/3aB5eEoveeclK1b/zsj/KGX7VsLHaC6Tw==", "treatment"=>{"name"=>"Deuxième traitement", "start_date(1i)"=>"2017", "start_date(2i)"=>"12", "start_date(3i)"=>"16", "main_purpose"=>"Essai 2", "other_purpose"=>"", "service_concerned"=>"Maison 2", "service_function"=>"", "category_people_concerned"=>"", "personal_data"=>"", "sensitive_data"=>"", "recipient"=>"", "storage_time(1i)"=>"2017", "storage_time(2i)"=>"12", "storage_time(3i)"=>"16", "observation"=>""}, "commit"=>"Done"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.2ms)[0m  [1m[32mINSERT INTO "treatments" ("user_id", "name", "start_date", "main_purpose", "other_purpose", "service_concerned", "service_function", "category_people_concerned", "personal_data", "sensitive_data", "recipient", "storage_time", "observation", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["user_id", 1], ["name", "Deuxième traitement"], ["start_date", "2017-12-16"], ["main_purpose", "Essai 2"], ["other_purpose", ""], ["service_concerned", "Maison 2"], ["service_function", ""], ["category_people_concerned", ""], ["personal_data", ""], ["sensitive_data", ""], ["recipient", ""], ["storage_time", "2017-12-16"], ["observation", ""], ["created_at", "2017-12-16 15:50:01.096724"], ["updated_at", "2017-12-16 15:50:01.096724"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/client/treatments.3
+Completed 302 Found in 34ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/client/treatments.3" for 127.0.0.1 at 2017-12-16 16:50:01 +0100
+Processing by Client::TreatmentsController#index as 
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (8.8ms)
+  Rendered shared/_sidebar.html.erb (0.8ms)
+  Rendered shared/_navbar.html.erb (2.9ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 228ms (Views: 187.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 16:50:09 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.8ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (0.6ms)
+  Rendered shared/_sidebar.html.erb (2.1ms)
+  Rendered shared/_navbar.html.erb (6.3ms)
+  Rendered shared/_flashes.html.erb (1.4ms)
+Completed 200 OK in 122ms (Views: 111.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 16:51:47 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.4ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (725.8ms)
+Completed 500 Internal Server Error in 743ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `treatment' for #<#<Class:0x00007fdf2edef7f0>:0x00007fdf2e850dd0>
+Did you mean?  @treatment):
+    1: <div class="treatment">
+    2:   <div class="col5 col-sm-6">
+    3:     <p><%= treatment.name %></p>
+    4:   </div>
+    5:   <div class="col5 col-sm-6">
+    6:     <p><%= treatment.start_date %></p>
+  
+app/views/client/treatments/show.html.erb:3:in `_app_views_client_treatments_show_html_erb___4433099705512325066_70298267455720'
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (124.5ms)
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 16:52:04 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.8ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (470.6ms)
+Completed 500 Internal Server Error in 495ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `treatment' for #<#<Class:0x00007fdf2edef7f0>:0x00007fdf334f69c8>
+Did you mean?  @treatment):
+    12:     <p><%= @treatment.service_concerned %></p>
+    13:   </div>
+    14:   <div class="col5 col-sm-6">
+    15:     <%= link_to "Voir", client_treatment_path(treatment), class: "btn-treatment" %>
+    16:   </div>
+    17: </div>
+  
+app/views/client/treatments/show.html.erb:15:in `_app_views_client_treatments_show_html_erb___4433099705512325066_70298307639760'
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (163.3ms)
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 16:52:16 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.8ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (0.8ms)
+  Rendered shared/_sidebar.html.erb (1.9ms)
+  Rendered shared/_navbar.html.erb (3.8ms)
+  Rendered shared/_flashes.html.erb (2.1ms)
+Completed 200 OK in 110ms (Views: 100.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 16:52:22 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (4.7ms)
+  Rendered shared/_sidebar.html.erb (0.6ms)
+  Rendered shared/_navbar.html.erb (1.6ms)
+  Rendered shared/_flashes.html.erb (0.6ms)
+Completed 200 OK in 51ms (Views: 43.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/client/treatments/2" for 127.0.0.1 at 2017-12-16 16:52:25 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.6ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (1.0ms)
+  Rendered shared/_sidebar.html.erb (0.6ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+  Rendered shared/_flashes.html.erb (0.7ms)
+Completed 200 OK in 54ms (Views: 46.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/client/treatments/2" for 127.0.0.1 at 2017-12-16 16:57:41 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (5.8ms)
+  Rendered shared/_sidebar.html.erb (2.3ms)
+  Rendered shared/_navbar.html.erb (13.6ms)
+  Rendered shared/_flashes.html.erb (1.6ms)
+Completed 200 OK in 149ms (Views: 120.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 16:57:57 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (8.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (11.9ms)
+  Rendered shared/_sidebar.html.erb (0.7ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+  Rendered shared/_flashes.html.erb (0.8ms)
+Completed 200 OK in 96ms (Views: 77.0ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 16:57:57 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.8ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (5.0ms)
+  Rendered shared/_sidebar.html.erb (0.7ms)
+  Rendered shared/_navbar.html.erb (1.9ms)
+  Rendered shared/_flashes.html.erb (0.7ms)
+Completed 200 OK in 67ms (Views: 58.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/client/treatments/new" for 127.0.0.1 at 2017-12-16 16:57:59 +0100
+Processing by Client::TreatmentsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/new.html.erb within layouts/application
+  Rendered client/treatments/_form.html.erb (43.9ms)
+  Rendered client/treatments/new.html.erb within layouts/application (47.4ms)
+  Rendered shared/_sidebar.html.erb (0.7ms)
+  Rendered shared/_navbar.html.erb (3.0ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 112ms (Views: 105.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 16:58:03 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (3.7ms)
+  Rendered shared/_sidebar.html.erb (0.7ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+  Rendered shared/_flashes.html.erb (0.7ms)
+Completed 200 OK in 55ms (Views: 48.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 16:58:04 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (1.1ms)
+  Rendered shared/_sidebar.html.erb (0.7ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 64ms (Views: 53.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 16:59:30 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.7ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (6.2ms)
+  Rendered shared/_sidebar.html.erb (2.9ms)
+  Rendered shared/_navbar.html.erb (14.7ms)
+  Rendered shared/_flashes.html.erb (1.7ms)
+Completed 200 OK in 165ms (Views: 130.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 16:59:39 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.4ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (1.5ms)
+  Rendered shared/_sidebar.html.erb (1.0ms)
+  Rendered shared/_navbar.html.erb (2.7ms)
+  Rendered shared/_flashes.html.erb (1.7ms)
+Completed 200 OK in 75ms (Views: 66.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:01:41 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (5.6ms)
+  Rendered shared/_sidebar.html.erb (1.7ms)
+  Rendered shared/_navbar.html.erb (4.3ms)
+  Rendered shared/_flashes.html.erb (1.2ms)
+Completed 200 OK in 106ms (Views: 75.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:02:02 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.6ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (1.6ms)
+  Rendered shared/_sidebar.html.erb (1.1ms)
+  Rendered shared/_navbar.html.erb (9.7ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 170ms (Views: 157.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:02:55 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (5.5ms)
+  Rendered shared/_sidebar.html.erb (1.7ms)
+  Rendered shared/_navbar.html.erb (6.5ms)
+  Rendered shared/_flashes.html.erb (1.6ms)
+Completed 200 OK in 115ms (Views: 85.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:03:24 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.3ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (1.2ms)
+  Rendered shared/_sidebar.html.erb (1.1ms)
+  Rendered shared/_navbar.html.erb (1.9ms)
+  Rendered shared/_flashes.html.erb (0.7ms)
+Completed 200 OK in 52ms (Views: 45.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:04:11 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.3ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (5.9ms)
+  Rendered shared/_sidebar.html.erb (1.1ms)
+  Rendered shared/_navbar.html.erb (2.3ms)
+  Rendered shared/_flashes.html.erb (1.4ms)
+Completed 200 OK in 82ms (Views: 74.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:05:15 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.4ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (6.9ms)
+  Rendered shared/_sidebar.html.erb (1.5ms)
+  Rendered shared/_navbar.html.erb (6.0ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 10955ms (Views: 10917.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:05:37 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.4ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (1.1ms)
+  Rendered shared/_sidebar.html.erb (1.3ms)
+  Rendered shared/_navbar.html.erb (3.5ms)
+  Rendered shared/_flashes.html.erb (1.5ms)
+Completed 200 OK in 11608ms (Views: 11600.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:05:50 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.3ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (1.9ms)
+  Rendered shared/_sidebar.html.erb (1.0ms)
+  Rendered shared/_navbar.html.erb (2.5ms)
+  Rendered shared/_flashes.html.erb (1.3ms)
+Completed 200 OK in 299ms (Views: 289.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:06:44 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.7ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (8.9ms)
+  Rendered shared/_sidebar.html.erb (4.8ms)
+  Rendered shared/_navbar.html.erb (7.8ms)
+  Rendered shared/_flashes.html.erb (2.8ms)
+Completed 200 OK in 245ms (Views: 207.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 17:11:00 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (6.2ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (25.4ms)
+  Rendered shared/_sidebar.html.erb (1.6ms)
+  Rendered shared/_navbar.html.erb (12.9ms)
+  Rendered shared/_flashes.html.erb (2.5ms)
+Completed 200 OK in 195ms (Views: 156.2ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 17:11:23 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.4ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (9.2ms)
+  Rendered shared/_sidebar.html.erb (1.0ms)
+  Rendered shared/_navbar.html.erb (3.1ms)
+  Rendered shared/_flashes.html.erb (1.4ms)
+Completed 200 OK in 97ms (Views: 88.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 17:12:05 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (4.5ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (36.4ms)
+  Rendered shared/_sidebar.html.erb (1.2ms)
+  Rendered shared/_navbar.html.erb (14.0ms)
+  Rendered shared/_flashes.html.erb (4.1ms)
+Completed 200 OK in 316ms (Views: 242.7ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/client/treatments/2" for 127.0.0.1 at 2017-12-16 17:12:12 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.4ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (2.0ms)
+  Rendered shared/_sidebar.html.erb (0.8ms)
+  Rendered shared/_navbar.html.erb (3.1ms)
+  Rendered shared/_flashes.html.erb (1.2ms)
+Completed 200 OK in 69ms (Views: 59.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/client/treatments/2" for 127.0.0.1 at 2017-12-16 17:12:17 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.2ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (1.9ms)
+  Rendered shared/_sidebar.html.erb (1.1ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+  Rendered shared/_flashes.html.erb (0.7ms)
+Completed 200 OK in 65ms (Views: 57.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 17:12:52 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.3ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (3.9ms)
+  Rendered shared/_sidebar.html.erb (0.7ms)
+  Rendered shared/_navbar.html.erb (1.9ms)
+  Rendered shared/_flashes.html.erb (0.6ms)
+Completed 200 OK in 69ms (Views: 57.7ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/client/treatments/2" for 127.0.0.1 at 2017-12-16 17:13:08 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (1.1ms)
+  Rendered shared/_sidebar.html.erb (0.7ms)
+  Rendered shared/_navbar.html.erb (1.7ms)
+  Rendered shared/_flashes.html.erb (0.8ms)
+Completed 200 OK in 60ms (Views: 49.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 17:14:46 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.6ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (16.7ms)
+  Rendered shared/_sidebar.html.erb (1.2ms)
+  Rendered shared/_navbar.html.erb (7.7ms)
+  Rendered shared/_flashes.html.erb (4.2ms)
+Completed 200 OK in 293ms (Views: 255.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 17:15:15 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.6ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (5.4ms)
+  Rendered shared/_sidebar.html.erb (1.5ms)
+  Rendered shared/_navbar.html.erb (3.8ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 10674ms (Views: 10665.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 17:15:50 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.7ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (5.2ms)
+  Rendered shared/_sidebar.html.erb (1.3ms)
+  Rendered shared/_navbar.html.erb (4.0ms)
+  Rendered shared/_flashes.html.erb (1.3ms)
+Completed 200 OK in 9537ms (Views: 9527.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 17:16:40 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.4ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (4.8ms)
+  Rendered shared/_sidebar.html.erb (1.4ms)
+  Rendered shared/_navbar.html.erb (3.8ms)
+  Rendered shared/_flashes.html.erb (1.2ms)
+Completed 200 OK in 10535ms (Views: 10524.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 17:17:43 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (6.1ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (10.0ms)
+  Rendered shared/_sidebar.html.erb (1.5ms)
+  Rendered shared/_navbar.html.erb (3.7ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 10596ms (Views: 10577.5ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 17:20:11 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.6ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (21.0ms)
+  Rendered shared/_sidebar.html.erb (1.4ms)
+  Rendered shared/_navbar.html.erb (3.2ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 12375ms (Views: 12336.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:20:29 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.7ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (1.5ms)
+  Rendered shared/_sidebar.html.erb (1.1ms)
+  Rendered shared/_navbar.html.erb (2.9ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 80ms (Views: 68.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 17:23:03 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.4ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (4.5ms)
+  Rendered shared/_sidebar.html.erb (0.6ms)
+  Rendered shared/_navbar.html.erb (1.6ms)
+  Rendered shared/_flashes.html.erb (0.8ms)
+Completed 200 OK in 53ms (Views: 47.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 17:23:58 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (8.1ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (45.4ms)
+  Rendered shared/_sidebar.html.erb (12.0ms)
+  Rendered shared/_navbar.html.erb (8.3ms)
+  Rendered shared/_flashes.html.erb (1.6ms)
+Completed 200 OK in 320ms (Views: 240.5ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 17:25:16 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (5.9ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (10.8ms)
+  Rendered shared/_sidebar.html.erb (0.8ms)
+  Rendered shared/_navbar.html.erb (4.1ms)
+  Rendered shared/_flashes.html.erb (1.8ms)
+Completed 200 OK in 98ms (Views: 83.9ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:25:32 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.6ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (2.0ms)
+  Rendered shared/_sidebar.html.erb (0.7ms)
+  Rendered shared/_navbar.html.erb (3.5ms)
+  Rendered shared/_flashes.html.erb (1.3ms)
+Completed 200 OK in 79ms (Views: 66.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:27:20 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.7ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (5.7ms)
+  Rendered shared/_sidebar.html.erb (1.4ms)
+  Rendered shared/_navbar.html.erb (3.6ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 10232ms (Views: 10197.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:27:57 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (5.4ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (3.6ms)
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:27:58 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (1.0ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (1.5ms)
+  Rendered shared/_sidebar.html.erb (1.4ms)
+  Rendered shared/_navbar.html.erb (3.2ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 15344ms (Views: 15330.8ms | ActiveRecord: 6.2ms)
+
+
+  Rendered shared/_sidebar.html.erb (1.0ms)
+  Rendered shared/_navbar.html.erb (2.6ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 16246ms (Views: 16227.3ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 17:30:03 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.6ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (23.9ms)
+  Rendered shared/_sidebar.html.erb (1.4ms)
+  Rendered shared/_navbar.html.erb (8.3ms)
+  Rendered shared/_flashes.html.erb (8.5ms)
+Completed 200 OK in 246ms (Views: 196.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:30:16 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.9ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (4.2ms)
+  Rendered shared/_sidebar.html.erb (1.0ms)
+  Rendered shared/_navbar.html.erb (3.8ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 94ms (Views: 81.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:31:06 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.7ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (44.5ms)
+  Rendered shared/_sidebar.html.erb (1.9ms)
+  Rendered shared/_navbar.html.erb (4.1ms)
+  Rendered shared/_flashes.html.erb (1.2ms)
+Completed 200 OK in 10046ms (Views: 10003.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:31:27 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.7ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (6.7ms)
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:31:34 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:31:34 +0100
+  [1m[36mUser Load (104.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (101.0ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (1.5ms)
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (18.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (29.7ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (0.3ms)
+  Rendered shared/_sidebar.html.erb (1.1ms)
+  Rendered shared/_navbar.html.erb (2.6ms)
+  Rendered shared/_flashes.html.erb (0.8ms)
+Completed 200 OK in 19021ms (Views: 18980.6ms | ActiveRecord: 2.7ms)
+
+
+  Rendered shared/_sidebar.html.erb (1.5ms)
+  Rendered shared/_navbar.html.erb (2.7ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 16611ms (Views: 16460.3ms | ActiveRecord: 131.4ms)
+
+
+  Rendered shared/_sidebar.html.erb (0.4ms)
+  Rendered shared/_navbar.html.erb (1.4ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 17717ms (Views: 17302.4ms | ActiveRecord: 205.5ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:35:28 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (7.1ms)
+  Rendered shared/_sidebar.html.erb (1.9ms)
+  Rendered shared/_navbar.html.erb (4.3ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 9216ms (Views: 9176.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:36:43 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.7ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (6.9ms)
+  Rendered shared/_sidebar.html.erb (1.4ms)
+  Rendered shared/_navbar.html.erb (3.3ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 10359ms (Views: 10324.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:37:29 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (1.2ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (9.6ms)
+  Rendered shared/_sidebar.html.erb (1.4ms)
+  Rendered shared/_navbar.html.erb (2.7ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 9809ms (Views: 9734.9ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:39:11 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (1.1ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (7.3ms)
+  Rendered shared/_sidebar.html.erb (1.3ms)
+  Rendered shared/_navbar.html.erb (2.9ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 9297ms (Views: 9244.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:39:50 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.6ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (1.4ms)
+  Rendered shared/_sidebar.html.erb (1.5ms)
+  Rendered shared/_navbar.html.erb (3.7ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 87ms (Views: 78.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:39:57 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.4ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (8.4ms)
+  Rendered shared/_sidebar.html.erb (1.7ms)
+  Rendered shared/_navbar.html.erb (4.0ms)
+  Rendered shared/_flashes.html.erb (1.5ms)
+Completed 200 OK in 149ms (Views: 108.5ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:40:03 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.3ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (1.5ms)
+  Rendered shared/_sidebar.html.erb (0.8ms)
+  Rendered shared/_navbar.html.erb (2.2ms)
+  Rendered shared/_flashes.html.erb (0.6ms)
+Completed 200 OK in 59ms (Views: 50.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:40:16 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.3ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (2.2ms)
+  Rendered shared/_sidebar.html.erb (2.3ms)
+  Rendered shared/_navbar.html.erb (5.9ms)
+  Rendered shared/_flashes.html.erb (3.6ms)
+Completed 200 OK in 162ms (Views: 142.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:42:00 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (9.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.8ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (13.4ms)
+  Rendered shared/_sidebar.html.erb (1.7ms)
+  Rendered shared/_navbar.html.erb (3.8ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 10328ms (Views: 10211.7ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:42:44 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (10.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.4ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (2.1ms)
+  Rendered shared/_sidebar.html.erb (1.5ms)
+  Rendered shared/_navbar.html.erb (4.0ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 13113ms (Views: 13092.6ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:43:43 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (5.9ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (17.4ms)
+  Rendered shared/_sidebar.html.erb (2.6ms)
+  Rendered shared/_navbar.html.erb (5.5ms)
+  Rendered shared/_flashes.html.erb (1.6ms)
+Completed 200 OK in 319ms (Views: 250.1ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:43:44 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (1.6ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (2.6ms)
+  Rendered shared/_sidebar.html.erb (1.2ms)
+  Rendered shared/_navbar.html.erb (4.5ms)
+  Rendered shared/_flashes.html.erb (1.2ms)
+Completed 200 OK in 134ms (Views: 121.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:44:35 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.2ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (1.6ms)
+  Rendered shared/_sidebar.html.erb (1.2ms)
+  Rendered shared/_navbar.html.erb (2.9ms)
+  Rendered shared/_flashes.html.erb (0.6ms)
+Completed 200 OK in 8903ms (Views: 8896.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:45:52 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.3ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (2.8ms)
+  Rendered shared/_sidebar.html.erb (1.7ms)
+  Rendered shared/_navbar.html.erb (2.5ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 10376ms (Views: 10366.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:47:16 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (19.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.6ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (4.6ms)
+  Rendered shared/_sidebar.html.erb (1.8ms)
+  Rendered shared/_navbar.html.erb (8.6ms)
+  Rendered shared/_flashes.html.erb (1.5ms)
+Completed 200 OK in 154ms (Views: 119.0ms | ActiveRecord: 20.5ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:51:14 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.6ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  Rendered client/treatments/show.html.erb within layouts/application (8.0ms)
+  Rendered shared/_sidebar.html.erb (2.0ms)
+  Rendered shared/_navbar.html.erb (6.3ms)
+  Rendered shared/_flashes.html.erb (2.3ms)
+Completed 200 OK in 168ms (Views: 136.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 17:59:55 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (51.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (16.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (512.8ms)
+Completed 500 Internal Server Error in 618ms (ActiveRecord: 68.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_owner_instrument_path' for #<#<Class:0x00007fdf2edef7f0>:0x00007fdf2f72eb40>
+Did you mean?  edit_registration_path):
+    105: <div class="btns-treatment">
+    106:   <% if current_user == @treatment.user %>
+    107:     <div class="btn-edit">
+    108:       <%= link_to "Edit", edit_owner_instrument_path(@instrument), class: "btn btn-primary" %>
+    109:     </div>
+    110:     <div class="btn-delete">
+    111:       <%= link_to "Delete", owner_instrument_path(@instrument), method: :delete, class: "btn btn-primary btn-update" %>
+  
+app/views/client/treatments/show.html.erb:108:in `_app_views_client_treatments_show_html_erb___4433099705512325066_70298235945520'
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.9ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (127.1ms)
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 18:02:08 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (2.0ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (466.9ms)
+Completed 500 Internal Server Error in 541ms (ActiveRecord: 11.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_owner_instrument_path' for #<#<Class:0x00007fdf2edef7f0>:0x00007fdf1afdb410>
+Did you mean?  edit_registration_path):
+    105: <div class="btns-treatment">
+    106:   <% if current_user == @treatment.user %>
+    107:     <div class="btn-edit">
+    108:       <%= link_to "Edit", edit_owner_instrument_path(@instrument), class: "btn btn-primary" %>
+    109:     </div>
+    110:     <div class="btn-delete">
+    111:       <%= link_to "Delete", owner_instrument_path(@instrument), method: :delete, class: "btn btn-primary btn-update" %>
+  
+app/views/client/treatments/show.html.erb:108:in `_app_views_client_treatments_show_html_erb___4433099705512325066_70298103635700'
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (131.9ms)
+Started GET "/client/treatments/3" for 127.0.0.1 at 2017-12-16 18:02:53 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.6ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (25.2ms)
+  Rendered shared/_sidebar.html.erb (2.0ms)
+  Rendered shared/_navbar.html.erb (9.6ms)
+  Rendered shared/_flashes.html.erb (2.6ms)
+Completed 200 OK in 221ms (Views: 183.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/client/treatments/3/edit" for 127.0.0.1 at 2017-12-16 18:02:56 +0100
+Processing by Client::TreatmentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.4ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 219ms (ActiveRecord: 7.0ms)
+
+
+  
+ActionController::UnknownFormat (Client::TreatmentsController#edit is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.0.6) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
+actionpack (5.0.6) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.0.6) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.0.6) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.6) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.6) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.6) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.6) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.6) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.6) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.6) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.6) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.6) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.6) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.6) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.6) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.6) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.6) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.6) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.6) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.6) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.6) lib/action_dispatch/routing/route_set.rb:727:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.6) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.6) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.6) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.6) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (122.6ms)
+Started DELETE "/client/treatments/3" for 127.0.0.1 at 2017-12-16 18:03:06 +0100
+Processing by Client::TreatmentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HksAJDaclPASUoxOtzeZZMbO+vQvdJB5BJgZlamZS5WSfKMJQvBLDWkcDQhEMzh2iGRTyMok7JUEJAYQOhlhSg==", "id"=>"3"}
+  [1m[36mUser Load (25.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (1.0ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (23.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (65.4ms)[0m  [1m[31mDELETE FROM "treatments" WHERE "treatments"."id" = $1[0m  [["id", 3]]
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/client/treatments
+Completed 302 Found in 131ms (ActiveRecord: 119.6ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 18:03:07 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (1.9ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (19.5ms)
+  Rendered shared/_sidebar.html.erb (0.6ms)
+  Rendered shared/_navbar.html.erb (1.7ms)
+  Rendered shared/_flashes.html.erb (0.6ms)
+Completed 200 OK in 72ms (Views: 61.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/client/treatments/2" for 127.0.0.1 at 2017-12-16 18:03:10 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (21.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.3ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (5.5ms)
+  Rendered shared/_sidebar.html.erb (0.7ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+  Rendered shared/_flashes.html.erb (0.7ms)
+Completed 200 OK in 85ms (Views: 56.3ms | ActiveRecord: 22.0ms)
+
+
+Started DELETE "/client/treatments/2" for 127.0.0.1 at 2017-12-16 18:03:12 +0100
+Processing by Client::TreatmentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hKA9ZbIHGbWKi0db3RBRSQVWY66VGuVll4YbUXVUbeIIl55IxmvGSPHFxh0uFPBbS/zKknBKmYmXOgTU5tRHPQ==", "id"=>"2"}
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (10.5ms)[0m  [1m[31mDELETE FROM "treatments" WHERE "treatments"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/client/treatments
+Completed 302 Found in 23ms (ActiveRecord: 18.0ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 18:03:12 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.4ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (3.1ms)
+  Rendered shared/_sidebar.html.erb (0.6ms)
+  Rendered shared/_navbar.html.erb (1.9ms)
+  Rendered shared/_flashes.html.erb (0.6ms)
+Completed 200 OK in 53ms (Views: 47.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/client/treatments/new" for 127.0.0.1 at 2017-12-16 18:03:14 +0100
+Processing by Client::TreatmentsController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/new.html.erb within layouts/application
+  Rendered client/treatments/_form.html.erb (33.3ms)
+  Rendered client/treatments/new.html.erb within layouts/application (36.8ms)
+  Rendered shared/_sidebar.html.erb (0.8ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+  Rendered shared/_flashes.html.erb (0.6ms)
+Completed 200 OK in 95ms (Views: 83.7ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/client/treatments" for 127.0.0.1 at 2017-12-16 18:03:55 +0100
+Processing by Client::TreatmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1gXyCmrDjYskoXeIwTlyVyz5sJMlgAEGINPdMDIokHBaMlEnHq9Sdl/v9s4yPdNFYlMZr8DQfeogb8K1oai6rw==", "treatment"=>{"name"=>"Premier traitement de données", "start_date(1i)"=>"2017", "start_date(2i)"=>"12", "start_date(3i)"=>"16", "main_purpose"=>"Essai 1", "other_purpose"=>"Essai 10", "service_concerned"=>"Maison", "service_function"=>"Fonctionnel", "category_people_concerned"=>"", "personal_data"=>"", "sensitive_data"=>"", "recipient"=>"", "storage_time(1i)"=>"2017", "storage_time(2i)"=>"12", "storage_time(3i)"=>"16", "observation"=>"Lorem"}, "commit"=>"Done"}
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (41.4ms)[0m  [1m[32mINSERT INTO "treatments" ("user_id", "name", "start_date", "main_purpose", "other_purpose", "service_concerned", "service_function", "category_people_concerned", "personal_data", "sensitive_data", "recipient", "storage_time", "observation", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["user_id", 1], ["name", "Premier traitement de données"], ["start_date", "2017-12-16"], ["main_purpose", "Essai 1"], ["other_purpose", "Essai 10"], ["service_concerned", "Maison"], ["service_function", "Fonctionnel"], ["category_people_concerned", ""], ["personal_data", ""], ["sensitive_data", ""], ["recipient", ""], ["storage_time", "2017-12-16"], ["observation", "Lorem"], ["created_at", "2017-12-16 17:03:55.327273"], ["updated_at", "2017-12-16 17:03:55.327273"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/client/treatments.4
+Completed 302 Found in 59ms (ActiveRecord: 48.1ms)
+
+
+Started GET "/client/treatments.4" for 127.0.0.1 at 2017-12-16 18:03:55 +0100
+Processing by Client::TreatmentsController#index as 
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.4ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (4.0ms)
+  Rendered shared/_sidebar.html.erb (0.7ms)
+  Rendered shared/_navbar.html.erb (1.7ms)
+  Rendered shared/_flashes.html.erb (0.6ms)
+Completed 200 OK in 149ms (Views: 123.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:03:57 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.4ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (4.8ms)
+  Rendered shared/_sidebar.html.erb (0.6ms)
+  Rendered shared/_navbar.html.erb (4.2ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 65ms (Views: 55.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:06:01 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (1.6ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (17.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (38.1ms)
+  Rendered shared/_sidebar.html.erb (1.4ms)
+  Rendered shared/_navbar.html.erb (3.6ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 10926ms (Views: 10870.0ms | ActiveRecord: 20.3ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:06:50 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.6ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (22.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (46.2ms)
+  Rendered shared/_sidebar.html.erb (1.4ms)
+  Rendered shared/_navbar.html.erb (4.3ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 12777ms (Views: 12704.4ms | ActiveRecord: 24.5ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:07:24 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (11.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (1.5ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (11.4ms)
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:07:33 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (14.1ms)
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:07:34 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (30.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (1.0ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (11.3ms)
+  Rendered shared/_sidebar.html.erb (1.0ms)
+  Rendered shared/_navbar.html.erb (3.9ms)
+  Rendered shared/_flashes.html.erb (1.4ms)
+Completed 200 OK in 16023ms (Views: 15999.7ms | ActiveRecord: 13.5ms)
+
+
+  Rendered shared/_sidebar.html.erb (1.0ms)
+  Rendered shared/_sidebar.html.erb (0.7ms)
+  Rendered shared/_navbar.html.erb (2.8ms)
+  Rendered shared/_navbar.html.erb (2.3ms)
+  Rendered shared/_flashes.html.erb (0.8ms)
+  Rendered shared/_flashes.html.erb (0.8ms)
+Completed 200 OK in 20402ms (Views: 20357.0ms | ActiveRecord: 38.2ms)
+
+
+Completed 200 OK in 21429ms (Views: 21412.4ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:08:23 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (14.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (1.4ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (6.5ms)
+  Rendered shared/_sidebar.html.erb (1.3ms)
+  Rendered shared/_navbar.html.erb (3.4ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 9465ms (Views: 9439.6ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:09:29 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (14.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.4ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (11.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (19.0ms)
+  Rendered shared/_sidebar.html.erb (2.2ms)
+  Rendered shared/_navbar.html.erb (4.0ms)
+  Rendered shared/_flashes.html.erb (1.2ms)
+Completed 200 OK in 171ms (Views: 129.1ms | ActiveRecord: 25.7ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:09:49 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (22.4ms)
+  Rendered shared/_sidebar.html.erb (1.5ms)
+  Rendered shared/_navbar.html.erb (4.8ms)
+  Rendered shared/_flashes.html.erb (1.3ms)
+Completed 200 OK in 167ms (Views: 129.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:10:04 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.3ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (12.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (17.5ms)
+  Rendered shared/_sidebar.html.erb (1.5ms)
+  Rendered shared/_navbar.html.erb (9.7ms)
+  Rendered shared/_flashes.html.erb (1.4ms)
+Completed 200 OK in 409ms (Views: 387.3ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:11:41 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (4.9ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (37.6ms)
+  Rendered shared/_sidebar.html.erb (1.1ms)
+  Rendered shared/_navbar.html.erb (2.7ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 11483ms (Views: 11420.8ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/client/treatments/4/edit" for 127.0.0.1 at 2017-12-16 18:12:02 +0100
+Processing by Client::TreatmentsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.4ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 234ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionController::UnknownFormat (Client::TreatmentsController#edit is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.0.6) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
+actionpack (5.0.6) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.0.6) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.0.6) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.6) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.6) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.6) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.6) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.6) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.6) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.6) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.6) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.6) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.6) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.6) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.6) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.6) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.6) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.6) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.6) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.6) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.6) lib/action_dispatch/routing/route_set.rb:727:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.6) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.6) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.6) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.6) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (125.0ms)
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:12:29 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.4ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (22.3ms)
+  Rendered shared/_sidebar.html.erb (3.1ms)
+  Rendered shared/_navbar.html.erb (3.2ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 10775ms (Views: 10757.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:13:01 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.3ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (6.1ms)
+  Rendered shared/_sidebar.html.erb (1.1ms)
+  Rendered shared/_navbar.html.erb (2.7ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 11442ms (Views: 11430.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:13:27 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (1.2ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (11.2ms)
+  Rendered shared/_sidebar.html.erb (1.2ms)
+  Rendered shared/_navbar.html.erb (3.3ms)
+  Rendered shared/_flashes.html.erb (0.7ms)
+Completed 200 OK in 12090ms (Views: 12070.6ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:14:02 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (8.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.8ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (5.1ms)
+  Rendered shared/_sidebar.html.erb (1.1ms)
+  Rendered shared/_navbar.html.erb (4.0ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 10672ms (Views: 10650.8ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:14:50 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.3ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (5.8ms)
+  Rendered shared/_sidebar.html.erb (1.2ms)
+  Rendered shared/_navbar.html.erb (4.0ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 10782ms (Views: 10767.8ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:15:46 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.4ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (10.5ms)
+  Rendered shared/_sidebar.html.erb (1.7ms)
+  Rendered shared/_navbar.html.erb (3.2ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 10910ms (Views: 10879.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:17:46 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (21.2ms)
+  Rendered shared/_sidebar.html.erb (2.7ms)
+  Rendered shared/_navbar.html.erb (12.0ms)
+  Rendered shared/_flashes.html.erb (2.7ms)
+Completed 200 OK in 204ms (Views: 170.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/client/treatments/4/edit" for 127.0.0.1 at 2017-12-16 18:17:50 +0100
+Processing by Client::TreatmentsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.7ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/edit.html.erb within layouts/application
+  Rendered client/treatments/_form.html.erb (68.1ms)
+  Rendered client/treatments/edit.html.erb within layouts/application (73.0ms)
+  Rendered shared/_sidebar.html.erb (1.0ms)
+  Rendered shared/_navbar.html.erb (5.2ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 185ms (Views: 165.3ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:19:21 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.7ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (31.5ms)
+  Rendered shared/_sidebar.html.erb (1.2ms)
+  Rendered shared/_navbar.html.erb (3.5ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 11653ms (Views: 11603.4ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:20:00 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.4ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (17.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (23.1ms)
+  Rendered shared/_sidebar.html.erb (1.4ms)
+  Rendered shared/_navbar.html.erb (3.5ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 9892ms (Views: 9865.5ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:22:29 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.8ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (21.3ms)
+  Rendered shared/_sidebar.html.erb (2.7ms)
+  Rendered shared/_navbar.html.erb (10.2ms)
+  Rendered shared/_flashes.html.erb (2.7ms)
+Completed 200 OK in 208ms (Views: 170.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:22:50 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (8.3ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (13.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (22.1ms)
+  Rendered shared/_sidebar.html.erb (1.2ms)
+  Rendered shared/_navbar.html.erb (4.8ms)
+  Rendered shared/_flashes.html.erb (2.7ms)
+Completed 200 OK in 203ms (Views: 166.4ms | ActiveRecord: 23.9ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:23:48 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (15.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.8ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (38.3ms)
+  Rendered shared/_sidebar.html.erb (1.7ms)
+  Rendered shared/_navbar.html.erb (16.3ms)
+  Rendered shared/_flashes.html.erb (2.5ms)
+Completed 200 OK in 349ms (Views: 274.3ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 18:23:51 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (6.0ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (12.7ms)
+  Rendered shared/_sidebar.html.erb (1.4ms)
+  Rendered shared/_navbar.html.erb (3.9ms)
+  Rendered shared/_flashes.html.erb (1.2ms)
+Completed 200 OK in 113ms (Views: 92.8ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:23:54 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.3ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (7.8ms)
+  Rendered shared/_sidebar.html.erb (1.4ms)
+  Rendered shared/_navbar.html.erb (3.1ms)
+  Rendered shared/_flashes.html.erb (5.2ms)
+Completed 200 OK in 103ms (Views: 88.4ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:25:39 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (23.6ms)
+  Rendered shared/_sidebar.html.erb (1.8ms)
+  Rendered shared/_navbar.html.erb (10.5ms)
+  Rendered shared/_flashes.html.erb (2.0ms)
+Completed 200 OK in 205ms (Views: 169.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:26:57 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (7.1ms)
+  Rendered shared/_sidebar.html.erb (4.0ms)
+  Rendered shared/_navbar.html.erb (5.3ms)
+  Rendered shared/_flashes.html.erb (1.4ms)
+Completed 200 OK in 12171ms (Views: 12156.3ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:29:33 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.7ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (30.5ms)
+  Rendered shared/_sidebar.html.erb (1.3ms)
+  Rendered shared/_navbar.html.erb (4.0ms)
+  Rendered shared/_flashes.html.erb (1.2ms)
+Completed 200 OK in 10887ms (Views: 10836.3ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:30:29 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.8ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (32.0ms)
+  Rendered shared/_sidebar.html.erb (1.3ms)
+  Rendered shared/_navbar.html.erb (8.8ms)
+  Rendered shared/_flashes.html.erb (1.6ms)
+Completed 200 OK in 9348ms (Views: 9297.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:31:23 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (3.1ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (7.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (30.1ms)
+  Rendered shared/_sidebar.html.erb (2.2ms)
+  Rendered shared/_navbar.html.erb (3.5ms)
+  Rendered shared/_flashes.html.erb (0.7ms)
+Completed 200 OK in 163ms (Views: 95.3ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:32:16 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (16.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.6ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (8.5ms)
+  Rendered shared/_sidebar.html.erb (2.1ms)
+  Rendered shared/_navbar.html.erb (4.6ms)
+  Rendered shared/_flashes.html.erb (1.2ms)
+Completed 200 OK in 11361ms (Views: 11333.3ms | ActiveRecord: 18.4ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:32:56 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (21.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (5.3ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (36.7ms)
+  Rendered shared/_sidebar.html.erb (1.3ms)
+  Rendered shared/_navbar.html.erb (2.5ms)
+  Rendered shared/_flashes.html.erb (2.1ms)
+Completed 200 OK in 11831ms (Views: 11718.8ms | ActiveRecord: 27.4ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:34:06 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (22.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (4.9ms)
+  Rendered shared/_sidebar.html.erb (3.6ms)
+  Rendered shared/_navbar.html.erb (5.7ms)
+  Rendered shared/_flashes.html.erb (2.1ms)
+Completed 200 OK in 11106ms (Views: 11074.2ms | ActiveRecord: 23.5ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:34:44 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (6.2ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (13.3ms)
+  Rendered shared/_sidebar.html.erb (3.0ms)
+  Rendered shared/_navbar.html.erb (3.6ms)
+  Rendered shared/_flashes.html.erb (1.2ms)
+Completed 200 OK in 10544ms (Views: 10519.9ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 18:35:02 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (16.5ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (20.1ms)
+  Rendered shared/_sidebar.html.erb (1.9ms)
+  Rendered shared/_navbar.html.erb (3.4ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 94ms (Views: 66.7ms | ActiveRecord: 20.3ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 18:36:45 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (1.2ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (32.0ms)
+  Rendered shared/_sidebar.html.erb (1.2ms)
+  Rendered shared/_navbar.html.erb (3.7ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 10746ms (Views: 10701.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 18:37:11 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (4.7ms)
+  Rendered shared/_sidebar.html.erb (1.4ms)
+  Rendered shared/_navbar.html.erb (3.5ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 9599ms (Views: 9592.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 18:37:32 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.6ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (5.6ms)
+  Rendered shared/_sidebar.html.erb (1.7ms)
+  Rendered shared/_navbar.html.erb (3.1ms)
+  Rendered shared/_flashes.html.erb (1.2ms)
+Completed 200 OK in 10203ms (Views: 10192.0ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 18:37:51 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (1.2ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (6.3ms)
+  Rendered shared/_sidebar.html.erb (2.4ms)
+  Rendered shared/_navbar.html.erb (3.6ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 10578ms (Views: 10567.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 18:38:12 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.8ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (7.8ms)
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 18:38:12 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (9.7ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (45.6ms)
+  Rendered shared/_sidebar.html.erb (1.3ms)
+  Rendered shared/_navbar.html.erb (4.7ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 15894ms (Views: 15878.7ms | ActiveRecord: 5.7ms)
+
+
+  Rendered shared/_sidebar.html.erb (1.1ms)
+  Rendered shared/_navbar.html.erb (3.1ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 15695ms (Views: 15671.2ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 18:39:30 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (23.4ms)
+  Rendered shared/_sidebar.html.erb (1.7ms)
+  Rendered shared/_navbar.html.erb (6.7ms)
+  Rendered shared/_flashes.html.erb (2.4ms)
+Completed 200 OK in 173ms (Views: 137.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 18:39:41 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (1.1ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (14.8ms)
+  Rendered shared/_sidebar.html.erb (2.6ms)
+  Rendered shared/_navbar.html.erb (4.8ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 171ms (Views: 151.6ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 18:40:57 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (15.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.8ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (33.9ms)
+  Rendered shared/_sidebar.html.erb (1.6ms)
+  Rendered shared/_navbar.html.erb (4.1ms)
+  Rendered shared/_flashes.html.erb (1.2ms)
+Completed 200 OK in 9896ms (Views: 9821.2ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/client/treatments/new" for 127.0.0.1 at 2017-12-16 18:41:10 +0100
+Processing by Client::TreatmentsController#new as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/new.html.erb within layouts/application
+  Rendered client/treatments/_form.html.erb (42.9ms)
+  Rendered client/treatments/new.html.erb within layouts/application (47.3ms)
+  Rendered shared/_sidebar.html.erb (1.0ms)
+  Rendered shared/_navbar.html.erb (2.6ms)
+  Rendered shared/_flashes.html.erb (21.8ms)
+Completed 200 OK in 141ms (Views: 129.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 18:41:15 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.3ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (5.4ms)
+  Rendered shared/_sidebar.html.erb (1.4ms)
+  Rendered shared/_navbar.html.erb (3.9ms)
+  Rendered shared/_flashes.html.erb (1.2ms)
+Completed 200 OK in 91ms (Views: 81.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/client/treatments/new" for 127.0.0.1 at 2017-12-16 18:41:27 +0100
+Processing by Client::TreatmentsController#new as HTML
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/new.html.erb within layouts/application
+  Rendered client/treatments/_form.html.erb (22.9ms)
+  Rendered client/treatments/new.html.erb within layouts/application (25.7ms)
+  Rendered shared/_sidebar.html.erb (0.9ms)
+  Rendered shared/_navbar.html.erb (4.2ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 98ms (Views: 87.4ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-16 18:41:29 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (4.5ms)
+  Rendered shared/_sidebar.html.erb (0.9ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 69ms (Views: 61.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/client/treatments/4" for 127.0.0.1 at 2017-12-16 18:41:32 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (6.4ms)
+  Rendered shared/_sidebar.html.erb (1.3ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+  Rendered shared/_flashes.html.erb (0.7ms)
+Completed 200 OK in 75ms (Views: 64.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/client/treatments/4/edit" for 127.0.0.1 at 2017-12-16 18:41:37 +0100
+Processing by Client::TreatmentsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering client/treatments/edit.html.erb within layouts/application
+  Rendered client/treatments/_form.html.erb (22.7ms)
+  Rendered client/treatments/edit.html.erb within layouts/application (25.7ms)
+  Rendered shared/_sidebar.html.erb (1.1ms)
+  Rendered shared/_navbar.html.erb (2.7ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 95ms (Views: 84.3ms | ActiveRecord: 5.1ms)
+
+

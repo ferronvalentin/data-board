@@ -24,23 +24,27 @@
     </div>
 
     <% @treatments.each do |treatment| %>
-      <div class="treatment">
-        <div class="col5 col-sm-6">
-          <p><%= treatment.name %></p>
+    <!-- <div class="list-treatment"> -->
+      <%#= link_to client_treatment_path(treatment) do %>
+        <div class="treatment">
+          <div class="col5 col-sm-6">
+            <p><%= treatment.name %></p>
+          </div>
+          <div class="col5 col-sm-6">
+            <p><%= treatment.start_date %></p>
+          </div>
+          <div class="col5 col-sm-6">
+            <p><%= treatment.main_purpose %></p>
+          </div>
+          <div class="col5 col-sm-6">
+            <p><%= treatment.service_concerned %></p>
+          </div>
+          <div class="col5 col-sm-6">
+            <%= link_to "Voir", client_treatment_path(treatment), class: "btn-treatment" %>
+          </div>
         </div>
-        <div class="col5 col-sm-6">
-          <p><%= treatment.start_date %></p>
-        </div>
-        <div class="col5 col-sm-6">
-          <p><%= treatment.main_purpose %></p>
-        </div>
-        <div class="col5 col-sm-6">
-          <p><%= treatment.service_concerned %></p>
-        </div>
-        <div class="col5 col-sm-6">
-          <%= link_to "Voir", client_treatment_path(treatment), class: "btn-treatment" %>
-        </div>
-      </div>
+        <%# end %>
+      <!-- </div> -->
     <% end %>
   </div>
 

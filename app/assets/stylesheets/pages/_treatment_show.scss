@@ -1,0 +1,68 @@
+.treatment-show {
+  margin: 30px;
+}
+
+.treatment-show-content {
+  margin-left: 40px;
+
+}
+
+.treatment-show-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 40px;
+  margin-bottom: 40px;
+  a {
+    color: #464855;
+  }
+}
+.treatment-show-header-return {
+  flex-grow: 0;
+}
+.treatment-show-header-text {
+  flex-grow: 1;
+}
+
+h1 {
+  font-style: Montserrat;
+  font-style: lighter;
+  color: $text-header;
+  font-size: 30px;
+  text-align: center;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.treatment-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(4,5,8,0.04);
+  padding: 10px 0;
+  .treatment-label {
+    color: rgba(4,5,8,0.54);
+    font-size: 0.9em;
+    vertical-align: middle;
+    padding-right: 12px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    order: 1;
+  }
+  .treatment-content {
+    vertical-align: middle;
+    flex-grow: 2;
+    flex-shrink: 2;
+    flex-basis: 0;
+    order: 2;
+  }
+}
+
+.btns-treatment {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
