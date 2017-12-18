@@ -1,47 +1,172 @@
-<div class="form-instrument">
+<div class="form-treatment">
   <%= simple_form_for [:client, @treatment] do |t| %>
-    <div class="form-inputs">
-      <div class="col-md-4 col-md-offset-4">
-        <%= t.input :name %>
-      </div>
-      <div class="col-md-4 col-md-offset-4">
-        <%= t.input :start_date %>
-      </div>
-      <div class="col-md-4 col-md-offset-4">
-        <%= t.input :main_purpose %>
-      </div>
-      <div class="col-md-4 col-md-offset-4">
-        <%= t.input :other_purpose %>
-      </div>
-      <div class="col-md-4 col-md-offset-4">
-        <%= t.input :service_concerned %>
-      </div>
-      <div class="col-md-4 col-md-offset-4">
-        <%= t.input :service_function %>
-      </div>
-      <div class="col-md-4 col-md-offset-4">
-        <%= t.input :category_people_concerned %>
-      </div>
-      <div class="col-md-4 col-md-offset-4">
-        <%= t.input :personal_data %>
-      </div>
-      <div class="col-md-4 col-md-offset-4">
-        <%= t.input :sensitive_data %>
-      </div>
-      <div class="col-md-4 col-md-offset-4">
-        <%= t.input :recipient %>
-      </div>
-      <div class="col-md-4 col-md-offset-4">
-        <%= t.input :storage_time %>
-      </div>
-      <div class="col-md-4 col-md-offset-4">
-        <%= t.input :observation %>
-      </div>
-      <div class="col-md-4 col-md-offset-4 center-btn">
-        <div class="form-actions">
-          <%= t.submit 'Done', class: 'btn btn-primary' %>
-        </div>
+  <div class="form-inputs">
+    <div class="col-sm-6 col-sm-offset-3">
+      <div class="form-group string optional treatment_name"><label class="control-label string optional" for="treatment_name">Nom du traitement</label><input class="form-control string optional" type="text" name="treatment[name]" id="treatment_name"></div>
+    </div>
+    <div class="col-sm-6 col-sm-offset-3">
+      <div class="form-group date optional treatment_start_date"><label class="control-label date optional" for="treatment_start_date_1i">Date de début du traitement</label>
+      <div class="form-inline">
+      <select id="treatment_start_date_3i" name="treatment[start_date(3i)]" class="form-control date optional">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18" selected="selected">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+      </select>
+      <select id="treatment_start_date_2i" name="treatment[start_date(2i)]" class="form-control date optional">
+        <option value="1">Janvier</option>
+        <option value="2">Février</option>
+        <option value="3">Mars</option>
+        <option value="4">Avril</option>
+        <option value="5">Mai</option>
+        <option value="6">Juin</option>
+        <option value="7">Juillet</option>
+        <option value="8">Août</option>
+        <option value="9">Septembre</option>
+        <option value="10">Octobre</option>
+        <option value="11">Novembre</option>
+        <option value="12" selected="selected">Décembre</option>
+      </select>
+      <select id="treatment_start_date_1i" name="treatment[start_date(1i)]" class="form-control date optional">
+      <option value="2012">2012</option>
+      <option value="2013">2013</option>
+      <option value="2014">2014</option>
+      <option value="2015">2015</option>
+      <option value="2016">2016</option>
+      <option value="2017" selected="selected">2017</option>
+      <option value="2018">2018</option>
+      <option value="2019">2019</option>
+      <option value="2020">2020</option>
+      <option value="2021">2021</option>
+      <option value="2022">2022</option>
+      </select>
       </div>
     </div>
+    </div>
+    <div class="col-sm-6 col-sm-offset-3">
+      <div class="form-group string optional treatment_main_purpose"><label class="control-label string optional" for="treatment_main_purpose">Objectif principal</label><input class="form-control string optional" type="text" name="treatment[main_purpose]" id="treatment_main_purpose"></div>
+    </div>
+    <div class="col-sm-6 col-sm-offset-3">
+      <div class="form-group string optional treatment_other_purpose"><label class="control-label string optional" for="treatment_other_purpose">Autres objectifs</label><input class="form-control string optional" type="text" name="treatment[other_purpose]" id="treatment_other_purpose"></div>
+    </div>
+    <div class="col-sm-6 col-sm-offset-3">
+      <div class="form-group string optional treatment_service_concerned"><label class="control-label string optional" for="treatment_service_concerned">Service concerné</label><input class="form-control string optional" type="text" name="treatment[service_concerned]" id="treatment_service_concerned"></div>
+    </div>
+    <div class="col-sm-6 col-sm-offset-3">
+      <div class="form-group string optional treatment_service_function"><label class="control-label string optional" for="treatment_service_function">Fonction du service</label><input class="form-control string optional" type="text" name="treatment[service_function]" id="treatment_service_function"></div>
+    </div>
+    <div class="col-sm-6 col-sm-offset-3">
+      <div class="form-group string optional treatment_category_people_concerned"><label class="control-label string optional" for="treatment_category_people_concerned">Categories de personnes concernées</label><input class="form-control string optional" type="text" name="treatment[category_people_concerned]" id="treatment_category_people_concerned"></div>
+    </div>
+    <div class="col-sm-6 col-sm-offset-3">
+      <div class="form-group string optional treatment_personal_data"><label class="control-label string optional" for="treatment_personal_data">Données personnelles récoltées</label><input class="form-control string optional" type="text" name="treatment[personal_data]" id="treatment_personal_data"></div>
+    </div>
+    <div class="col-sm-6 col-sm-offset-3">
+      <div class="form-group string optional treatment_sensitive_data"><label class="control-label string optional" for="treatment_sensitive_data">Données sensibles récoltées (si c'est le cas)</label><input class="form-control string optional" type="text" name="treatment[sensitive_data]" id="treatment_sensitive_data"></div>
+    </div>
+    <div class="col-sm-6 col-sm-offset-3">
+      <div class="form-group string optional treatment_recipient"><label class="control-label string optional" for="treatment_recipient">Destinataire des données personnelles récoltées</label><input class="form-control string optional" type="text" name="treatment[recipient]" id="treatment_recipient"></div>
+    </div>
+    <div class="col-sm-6 col-sm-offset-3">
+      <div class="form-group date optional treatment_storage_time"><label class="control-label date optional" for="treatment_storage_time_1i">Durée de conservation des données</label><div class="form-inline">
+        <select id="treatment_storage_time_3i" name="treatment[storage_time(3i)]" class="form-control date optional">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18" selected="selected">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+        </select>
+      <select id="treatment_storage_time_2i" name="treatment[storage_time(2i)]" class="form-control date optional">
+        <option value="1">Janvier</option>
+        <option value="2">Février</option>
+        <option value="3">Mars</option>
+        <option value="4">Avril</option>
+        <option value="5">Mai</option>
+        <option value="6">Juin</option>
+        <option value="7">Juillet</option>
+        <option value="8">Août</option>
+        <option value="9">Septembre</option>
+        <option value="10">Octobre</option>
+        <option value="11">Novembre</option>
+        <option value="12" selected="selected">Décembre</option>
+      </select>
+      <select id="treatment_storage_time_1i" name="treatment[storage_time(1i)]" class="form-control date optional">
+      <option value="2012">2012</option>
+      <option value="2013">2013</option>
+      <option value="2014">2014</option>
+      <option value="2015">2015</option>
+      <option value="2016">2016</option>
+      <option value="2017" selected="selected">2017</option>
+      <option value="2018">2018</option>
+      <option value="2019">2019</option>
+      <option value="2020">2020</option>
+      <option value="2021">2021</option>
+      <option value="2022">2022</option>
+      </select>
+      </div>
+    </div>
+    </div>
+    <div class="col-sm-6 col-sm-offset-3">
+      <div class="form-group string optional treatment_observation"><label class="control-label string optional" for="treatment_observation">Observations</label><input class="form-control string optional" type="text" name="treatment[observation]" id="treatment_observation"></div>
+    </div>
+    <div class="col-sm-6 col-sm-offset-3 center-btn">
+      <div class="form-actions">
+        <input type="submit" name="commit" value="CRÉER LE NOUVEAU TRAITEMENT" class="btn-edit" data-disable-with="Done">
+      </div>
+    </div>
+  </div>
   <% end %>
 </div>
