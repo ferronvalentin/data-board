@@ -4,4 +4,8 @@ class PagesController < ApplicationController
   layout 'public'
   def home
   end
+
+  def show
+    render template: "pages/question"
+  end
 end

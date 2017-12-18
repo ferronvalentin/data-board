@@ -1,0 +1,40 @@
+.checkbox {
+  margin-bottom: 70px;
+  text-align: center;
+  p {
+    margin-left: 20px;
+  }
+}
+
+.simple-form {
+  h3 {
+    text-align: left;
+  }
+}
+
+.category-choice {
+  color: #cccccc;
+  background: transparent;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #e8e8e8;
+  font-size: 14px;
+  text-align: center;
+  &:hover {
+    background: rgba(112,158,242,0.1);
+    border: 1px solid $blue;
+    color: $blue;
+    cursor: pointer;
+  }
+}
+input[type="checkbox"] {
+  margin: 7px 0 0;
+}
+
+// .category-choice {
+//   .active {
+//     background: rgba(112,158,242,0.4);
+//     border: 1px solid $blue;
+//     color: $blue;
+//   }
+// }

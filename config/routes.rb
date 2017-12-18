@@ -11,4 +11,6 @@ Rails.application.routes.draw do
     resources :treatments, only: :index
   end
 
+  get "/question" => "pages#show", :as => '/question'
+
 end
