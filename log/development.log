@@ -30029,3 +30029,362 @@ Processing by PagesController#show as HTML
 Completed 200 OK in 122ms (Views: 56.1ms | ActiveRecord: 31.9ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-12-19 14:37:16 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (18.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (6.5ms)
+  Rendered shared/_navbar-home.html.erb (49.6ms)
+  Rendered shared/_flashes.html.erb (0.8ms)
+Completed 200 OK in 761ms (Views: 758.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/question" for 127.0.0.1 at 2017-12-19 14:37:30 +0100
+Processing by PagesController#show as HTML
+  [1m[36mUser Load (25.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/question.html.erb within layouts/public
+  Rendered pages/question.html.erb within layouts/public (1.2ms)
+  Rendered shared/_navbar-home.html.erb (1.7ms)
+  Rendered shared/_flashes.html.erb (1.2ms)
+Completed 200 OK in 157ms (Views: 60.5ms | ActiveRecord: 63.5ms)
+
+
+Started GET "/question" for 127.0.0.1 at 2017-12-19 14:43:01 +0100
+Processing by PagesController#show as HTML
+  [1m[36mUser Load (11.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/question.html.erb within layouts/public
+  Rendered pages/question.html.erb within layouts/public (4.8ms)
+  Rendered shared/_navbar-home.html.erb (4.2ms)
+  Rendered shared/_flashes.html.erb (1.4ms)
+Completed 200 OK in 15004ms (Views: 14977.0ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/question" for 127.0.0.1 at 2017-12-19 14:44:19 +0100
+Processing by PagesController#show as HTML
+  [1m[36mUser Load (22.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/question.html.erb within layouts/public
+  Rendered pages/question.html.erb within layouts/public (11.0ms)
+  Rendered shared/_navbar-home.html.erb (29.9ms)
+  Rendered shared/_flashes.html.erb (1.8ms)
+Completed 200 OK in 270ms (Views: 199.8ms | ActiveRecord: 22.7ms)
+
+
+Started GET "/question" for 127.0.0.1 at 2017-12-19 14:44:38 +0100
+Processing by PagesController#show as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/question.html.erb within layouts/public
+  Rendered pages/question.html.erb within layouts/public (2.2ms)
+  Rendered shared/_navbar-home.html.erb (4.3ms)
+  Rendered shared/_flashes.html.erb (1.5ms)
+Completed 200 OK in 10880ms (Views: 10873.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/question" for 127.0.0.1 at 2017-12-19 14:45:28 +0100
+Processing by PagesController#show as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/question.html.erb within layouts/public
+  Rendered pages/question.html.erb within layouts/public (4.1ms)
+  Rendered shared/_navbar-home.html.erb (1.9ms)
+  Rendered shared/_flashes.html.erb (1.8ms)
+Completed 200 OK in 117ms (Views: 109.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/question" for 127.0.0.1 at 2017-12-19 14:46:51 +0100
+Processing by PagesController#show as HTML
+  [1m[36mUser Load (16.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/question.html.erb within layouts/public
+  Rendered pages/question.html.erb within layouts/public (3.9ms)
+  Rendered shared/_navbar-home.html.erb (3.1ms)
+  Rendered shared/_flashes.html.erb (1.9ms)
+Completed 200 OK in 271ms (Views: 244.0ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/question" for 127.0.0.1 at 2017-12-19 14:47:46 +0100
+Processing by PagesController#show as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/question.html.erb within layouts/public
+  Rendered pages/question.html.erb within layouts/public (11.1ms)
+  Rendered shared/_navbar-home.html.erb (2.5ms)
+  Rendered shared/_flashes.html.erb (13.7ms)
+Completed 200 OK in 220ms (Views: 180.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/question" for 127.0.0.1 at 2017-12-19 14:49:21 +0100
+Processing by PagesController#show as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/question.html.erb within layouts/public
+  Rendered pages/question.html.erb within layouts/public (3.0ms)
+  Rendered shared/_navbar-home.html.erb (2.2ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 107ms (Views: 97.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/question" for 127.0.0.1 at 2017-12-19 14:49:28 +0100
+Processing by PagesController#show as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/question.html.erb within layouts/public
+  Rendered pages/question.html.erb within layouts/public (2.8ms)
+  Rendered shared/_navbar-home.html.erb (4.2ms)
+  Rendered shared/_flashes.html.erb (1.6ms)
+Completed 200 OK in 149ms (Views: 112.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/question" for 127.0.0.1 at 2017-12-19 14:49:42 +0100
+Processing by PagesController#show as HTML
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/question.html.erb within layouts/public
+  Rendered pages/question.html.erb within layouts/public (1.6ms)
+  Rendered shared/_navbar-home.html.erb (0.8ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 56ms (Views: 50.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/question" for 127.0.0.1 at 2017-12-19 14:50:18 +0100
+Processing by PagesController#show as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/question.html.erb within layouts/public
+  Rendered pages/question.html.erb within layouts/public (1.5ms)
+  Rendered shared/_navbar-home.html.erb (1.3ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 55ms (Views: 51.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/question" for 127.0.0.1 at 2017-12-19 14:51:38 +0100
+Processing by PagesController#show as HTML
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/question.html.erb within layouts/public
+  Rendered pages/question.html.erb within layouts/public (4.4ms)
+  Rendered shared/_navbar-home.html.erb (5.0ms)
+  Rendered shared/_flashes.html.erb (2.8ms)
+Completed 200 OK in 128ms (Views: 100.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/question" for 127.0.0.1 at 2017-12-19 14:52:10 +0100
+Processing by PagesController#show as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/question.html.erb within layouts/public
+  Rendered pages/question.html.erb within layouts/public (1.6ms)
+  Rendered shared/_navbar-home.html.erb (0.8ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 52ms (Views: 47.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/question" for 127.0.0.1 at 2017-12-19 14:52:40 +0100
+Processing by PagesController#show as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/question.html.erb within layouts/public
+  Rendered pages/question.html.erb within layouts/public (1.2ms)
+  Rendered shared/_navbar-home.html.erb (1.2ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 134ms (Views: 129.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-19 14:54:45 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (5.2ms)
+  Rendered shared/_navbar-home.html.erb (3.0ms)
+  Rendered shared/_flashes.html.erb (3.6ms)
+Completed 200 OK in 98ms (Views: 92.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-19 14:56:32 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (6.7ms)
+  Rendered shared/_navbar-home.html.erb (26.7ms)
+  Rendered shared/_flashes.html.erb (1.3ms)
+Completed 200 OK in 567ms (Views: 564.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/question" for 127.0.0.1 at 2017-12-19 14:56:36 +0100
+Processing by PagesController#show as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/question.html.erb within layouts/public
+  Rendered pages/question.html.erb within layouts/public (1.2ms)
+  Rendered shared/_navbar-home.html.erb (1.2ms)
+  Rendered shared/_flashes.html.erb (0.8ms)
+Completed 200 OK in 116ms (Views: 48.2ms | ActiveRecord: 31.9ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-19 14:56:42 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (25.1ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (120.3ms)
+  Rendered shared/_sidebar.html.erb (0.6ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+  Rendered shared/_flashes.html.erb (0.8ms)
+Completed 200 OK in 220ms (Views: 150.4ms | ActiveRecord: 31.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-12-19 14:56:48 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ROVXSvGEKVtVOWpmQY9VHyOftmn5EpeYSLqoAwmUWm35b8YjoyNhTG0tz/yJzCzZQiiV8Bs0h54F5fxsTm2fUA=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (6.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-19 14:56:48 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (0.9ms)
+  Rendered shared/_navbar-home.html.erb (0.7ms)
+  Rendered shared/_flashes.html.erb (0.5ms)
+Completed 200 OK in 38ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/question" for 127.0.0.1 at 2017-12-19 14:56:53 +0100
+Processing by PagesController#show as HTML
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-19 14:56:53 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (73.1ms)
+Completed 200 OK in 112ms (Views: 109.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-12-19 14:56:57 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7HbkxM/imH9mGDWuR4Zft5s5cARsyS+NiN20kYzI5jU0KSaozhhBQ88qxH7FxxhoVQyWp+ZgprmyCf4WC89XsA==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Connexion"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7HbkxM/imH9mGDWuR4Zft5s5cARsyS+NiN20kYzI5jU0KSaozhhBQ88qxH7FxxhoVQyWp+ZgprmyCf4WC89XsA==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Connexion"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 60ms (Views: 57.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-19 15:01:31 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 118ms (Views: 76.6ms | ActiveRecord: 7.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-12-19 15:01:39 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ROVXSvGEKVtVOWpmQY9VHyOftmn5EpeYSLqoAwmUWm35b8YjoyNhTG0tz/yJzCzZQiiV8Bs0h54F5fxsTm2fUA=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-19 15:01:39 +0100
+Processing by PagesController#home as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-19 15:01:39 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 58ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-19 15:01:42 +0100
+Processing by PagesController#home as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-19 15:01:42 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 53ms (Views: 52.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-19 15:01:51 +0100
+Processing by PagesController#home as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-19 15:01:51 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 64ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-19 15:02:08 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 91ms (Views: 61.7ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-19 15:02:11 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.2ms)
+  Rendered shared/_navbar-home.html.erb (0.9ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 54ms (Views: 50.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/question" for 127.0.0.1 at 2017-12-19 15:02:17 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/question.html.erb within layouts/public
+  Rendered pages/question.html.erb within layouts/public (1.0ms)
+  Rendered shared/_navbar-home.html.erb (1.2ms)
+  Rendered shared/_flashes.html.erb (0.6ms)
+Completed 200 OK in 38ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2017-12-19 15:02:23 +0100
+Processing by Client::TreatmentsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-19 15:02:23 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 78ms (Views: 76.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/question" for 127.0.0.1 at 2017-12-19 15:03:20 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/question.html.erb within layouts/public
+  Rendered pages/question.html.erb within layouts/public (1.2ms)
+  Rendered shared/_navbar-home.html.erb (2.3ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 59ms (Views: 58.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-19 15:03:51 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (9.2ms)
+  Rendered shared/_navbar-home.html.erb (61.8ms)
+  Rendered shared/_flashes.html.erb (1.2ms)
+Completed 200 OK in 586ms (Views: 583.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/question" for 127.0.0.1 at 2017-12-19 15:03:54 +0100
+Processing by PagesController#show as HTML
+  Rendering pages/question.html.erb within layouts/public
+  Rendered pages/question.html.erb within layouts/public (1.1ms)
+  Rendered shared/_navbar-home.html.erb (1.0ms)
+  Rendered shared/_flashes.html.erb (1.3ms)
+Completed 200 OK in 50ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
