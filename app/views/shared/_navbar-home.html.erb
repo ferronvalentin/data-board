@@ -1,4 +1,12 @@
 <div class="navbar-orizon-home">
+
+  <div class="navbar-orizon-home-brand">
+    <% if current_page?(question_path) %>
+      <%= link_to root_path do %>
+         <%= image_tag "logo.png", class: "navbar-orizon-home-brand" %>
+      <% end %>
+    <% end %>
+  </div>
   <!-- Right Navigation -->
   <div class="navbar-orizon-home-right hidden-xs hidden-sm">
     <%= link_to "Nous contacter", root_path(:anchor => "nous-contacter"), class: "navbar-orizon-home-item navbar-orizon-home-link" %>
