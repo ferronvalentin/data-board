@@ -1,7 +1,7 @@
 <div class="navbar-orizon-home">
   <!-- Right Navigation -->
   <div class="navbar-orizon-home-right hidden-xs hidden-sm">
-    <a href="" class="navbar-orizon-home-item navbar-orizon-home-link">Nous contacter</a>
+    <%= link_to "Nous contacter", root_path(:anchor => "nous-contacter"), class: "navbar-orizon-home-item navbar-orizon-home-link" %>
     <%= link_to t(".sign_in", default: "Connexion"), new_user_session_path, class: "navbar-orizon-home-item navbar-orizon-home-link-connexion" %>
   </div>
 
@@ -10,7 +10,7 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-orizon-home-dropdown-menu">
-        <li><a href="#">Nous contacter</a></li>
+        <%= link_to "Nous contacter", root_path(:anchor => "nous-contacter") %>
         <li><a href="#">Connexion</a></li>
       </ul>
     </div>
