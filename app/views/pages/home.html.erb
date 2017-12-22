@@ -126,7 +126,7 @@
           <input type='description' name='message' class='input-message' placeholder="Votre message">
           </div>
           <div class="col-xs-12 col-sm-4 col-sm-offset-4 btn-contact-form">
-          <input type='submit' value='ENVOYER' class="btn-contact" />
+          <input type='submit' value='ENVOYER' class="btn-contact" onclick="myFunction()" />
           </div>
         </form>
       </div>
@@ -135,6 +135,11 @@
   </div>
 </div>
 
+<script>
+function myFunction() {
+    alert("Votre message a bien été envoyé. Nous revenons vers vous très vite.");
+}
+</script>
 
 <!-- Footer -->
 <div class="footer">
