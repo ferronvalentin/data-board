@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="dashboard">
+    <div class="row">
+      <div class="data-dashboard">
+        <div class="individual-data">
+          <div class="individual-data-data">
+            <%= @users.count if @users.count %>
+          </div>
+          <div class="individual-data-title">
+            Clients
+          </div>
+        </div>
+        <div class="individual-data">
+          <div class="individual-data-data">
+            <%= Treatment.count %>
+          </div>
+          <div class="individual-data-title">
+            Traitements
+          </div>
+        </div>
+        <div class="individual-data">
+          <div class="individual-data-data">
+            0
+          </div>
+          <div class="individual-data-title">
+            Statistiques
+          </div>
+        </div>
+        <div class="individual-data">
+          <div class="individual-data-data">
+            0
+          </div>
+          <div class="individual-data-title">
+            Documents
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- <h3>Clients</h3> -->
+      <div class="clients-list">
+        <div class="clients-list-title">
+          <h1>Clients</h1>
+          <%= link_to "Nouveau client", new_user_path, class: "btn-add-treatment" %>
+        </div>
+        <div class="column">
+          <table class="table">
+            <tbody>
+              <% @users.each do |user| %>
+              <tr>
+                <%= render user %>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

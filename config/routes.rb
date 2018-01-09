@@ -7,10 +7,12 @@ Rails.application.routes.draw do
     resources :treatments, only: [:new, :create, :index, :edit, :update, :destroy, :show]
   end
 
-  resources :users, only: :show do
+  resources :users, only: [:new, :create, :index, :edit, :update, :destroy, :show] do
     resources :treatments, only: :index
   end
 
   get "/question" => "pages#show", :as => '/question'
+
+  # post 'create_user' => 'users#create', as: :create_user
 
 end

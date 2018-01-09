@@ -15,8 +15,8 @@
       <!-- Avatar with dropdown menu -->
       <div class="navbar-orizon-item">
         <div class="dropdown">
-          <%= image_tag "https://image.flaticon.com/icons/png/512/306/306473.png", class: "avatar dropdown-toggle", id: "navbar-orizon-menu", "data-toggle" => "dropdown" %>
           <%= link_to (current_user.first_name), "#", class: "navbar-orizon-item navbar-orizon-link dropdown-toggle", id: "navbar-orizon-menu", "data-toggle" => "dropdown" %>
+          <%= image_tag "https://image.flaticon.com/icons/png/512/306/306473.png", class: "avatar dropdown-toggle", id: "navbar-orizon-menu", "data-toggle" => "dropdown" %>
 
           <ul class="dropdown-menu dropdown-menu-right navbar-orizon-dropdown-menu">
             <li>
@@ -38,7 +38,7 @@
         </div>
       </div>
     <% else %>
-      
+
     <% end %>
   </div>
 

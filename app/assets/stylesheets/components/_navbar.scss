@@ -1,9 +1,9 @@
 /* Main navbar */
 .navbar-orizon {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background: white;
+  background: linear-gradient(to right, #282140 , #41395b);
   transition: all 0.3s ease;
-  height: 60px;
+  height: 72px;
   padding: 0px 30px;
   display: flex;
   align-items: center;
@@ -48,8 +48,8 @@
 
 /* Navbar link */
 .navbar-orizon-link {
-  color: #616668;
-  font-size: 14px;
+  color: white;
+  font-size: 16px;
 }
 .navbar-orizon-link:hover {
   color: #da552f;

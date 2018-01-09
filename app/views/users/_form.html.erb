@@ -1,0 +1,17 @@
+<div class="form-instrument">
+  <%= simple_form_for @user do |u| %>
+    <div class="form-inputs">
+      <div class="col-sm-6 col-sm-offset-3">
+        <%= u.input :first_name, label: "Prénom du maire" %>
+      </div>
+      <div class="col-sm-6 col-sm-offset-3">
+        <%= u.input :last_name, label: "Nom du maire" %>
+      </div>
+      <div class="col-sm-6 col-sm-offset-3 center-btn">
+        <div class="form-actions">
+          <%= u.submit 'CONFIRMER', class: 'btn-edit' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

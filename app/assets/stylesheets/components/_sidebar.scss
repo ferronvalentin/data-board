@@ -1,19 +1,21 @@
 .sidebar {
   width: 200px;
   height: 100vh;
-  background-color: #22242f;
+  // background-color: #22242f;
+  background-color: white;
+  border-right: 1px solid rgba(89, 115, 238, .15);
 }
 
 .sidebar_color {
   width: 200px;
-  height: 60px;
+  height: 72px;
   // background: linear-gradient(140deg,#3C78E7 20%, #7fe4e1 100%);
-  background: #22242f;
+  background: white;
   display: flex;
   justify-content: center;
   align-items: center;
   h2 {
-    color: white;
+    color: #3C78E7;
     font: 26px Raleway;
     letter-spacing: 5px;
     margin: 0;
@@ -66,7 +68,7 @@
 }
 
 .side_menu {
-  padding-top: 100px;
+  padding-top: 88px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

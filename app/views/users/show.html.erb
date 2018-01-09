@@ -1,0 +1,86 @@
+<div class="treatment-show">
+  <div class="col-lg-12">
+    <div class="treatment-show-header">
+      <div class="treatment-show-return">
+        <%= link_to users_path do %>
+          <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        <% end %>
+      </div>
+      <div class="treatment-show-header-text">
+        <h1>Informations</h1>
+      </div>
+    </div>
+
+    <div class="treatment-show-content">
+      <div class="treatment-item">
+        <div class="treatment-label">
+          Commune :
+        </div>
+        <div class="treatment-content">
+          <%= @user.town_name if @user.town_name %>
+        </div>
+      </div>
+      <div class="treatment-item">
+        <div class="treatment-label">
+          Nom du maire :
+        </div>
+        <div class="treatment-content">
+          <%= @user.last_name if @user.last_name %>
+        </div>
+      </div>
+      <div class="treatment-item">
+        <div class="treatment-label">
+          Prénom du maire :
+        </div>
+        <div class="treatment-content">
+          <%= @user.first_name if @user.first_name %>
+        </div>
+      </div>
+      <div class="treatment-item">
+        <div class="treatment-label">
+          Numéro de téléphone :
+        </div>
+        <div class="treatment-content">
+          <%= @user.phone_number if @user.phone_number %>
+        </div>
+      </div>
+      <div class="treatment-item">
+        <div class="treatment-label">
+          Email :
+        </div>
+        <div class="treatment-content">
+          <%= @user.email if @user.email %>
+        </div>
+      </div>
+      <div class="treatment-item">
+        <div class="treatment-label">
+          Client créé le :
+        </div>
+        <div class="treatment-content">
+          <%= @user.created_at if @user.created_at %>
+        </div>
+      </div>
+      <div class="treatment-item">
+        <div class="treatment-label">
+          Date de la dernière modification :
+        </div>
+        <div class="treatment-content">
+          <%= @user.created_at if @user.created_at %>
+        </div>
+      </div>
+    </div>
+
+    <div class="btns-treatment">
+      <%= link_to "Modifier la fiche client", edit_user_path(@user), class: "btn-edit" %>
+      <%= link_to("Supprimer le client", user_path(@user), :data => { :confirm => "Êtes-vous sûr de vouloir supprimer cet utilisateur ?" }, :method => :delete, :class => 'btn-delete') unless @user == current_user %>
+      <% unless @user.admin? %>
+        <%= form_for(@user) do |f| %>
+        <%= f.select(:role, User.roles.keys.map {|role| [role.titleize,role]}) %>
+        <%= f.submit 'Changer le rôle', :class => 'button-xs' %>
+        <% end %>
+      <% end %>
+
+    </div>
+
+  </div>
+</div>

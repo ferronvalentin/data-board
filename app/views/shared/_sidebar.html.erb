@@ -1,9 +1,13 @@
 <div class="sidebar">
   <div class="sidebar_color">
-    <h2>ORIZON</h2>
+    <h2>HORIZON</h2>
   </div>
 
   <div class="container_menu side_menu pullRight">
+    <% if current_user.admin? %>
+    <%= link_to "Dashboard", users_path %>
+    <%= link_to "Nouveau Client", new_user_path %>
+    <% end %>
     <%= link_to "Traitements", client_treatments_path %>
     <%= link_to "Ajouter un traitement", new_client_treatment_path %>
       <a href="#">Projets en cours</a>

@@ -1,6 +1,11 @@
 <div class="treatments">
   <div class="treatments-title">
-    <h1>Mes traitements de données personnelles</h1>
+    <div class="treatments-title-help">
+      <h1>Mes traitements de données personnelles</h1>
+      <div class="help-tip">
+        <p><u>Traitement de données personnelles :</u> toute opération, ou ensemble d’opérations, portant sur des données permettant d'identifier un individu, quel que soit le procédé utilisé (collecte, enregistrement, organisation, conservation, adaptation, modification, extraction, consultation, utilisation, communication par transmission diffusion ou toute autre forme de mise à disposition, rapprochement ou interconnexion, verrouillage, effacement ou destruction, ...). <b>Vous devez indiquer tous les traitements de votre structure qu'ils soient numériques ou papiers.</b></p>
+      </div>
+    </div>
     <%= link_to "Ajouter un traitement", new_client_treatment_path, class: "btn-add-treatment" %>
   </div>
 

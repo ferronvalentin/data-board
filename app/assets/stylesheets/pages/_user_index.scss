@@ -1,0 +1,71 @@
+.data-dashboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 140px;
+  .individual-data {
+    background-color: white;
+    box-shadow: 0 0 6px 0 rgba(127, 139, 155, .25);
+    height: 80px;
+    width: 130px;
+    border: 1px solid rgba(89, 115, 238, 0.15);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding-left: 23px;
+  }
+}
+
+.individual-data-data {
+  font-size: 23px;
+  font-weight: bold;
+  color: $text-header;
+}
+.individual-data-title {
+  font-size: 14px;
+  color: $text-header;
+}
+
+// List of Clients
+
+.clients-list {
+  margin-right: 40px;
+  margin-right: 40px;
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 15px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 0 rgba(127, 139, 155, .25);
+  border: 1px solid rgba(89, 115, 238, 0.15);
+}
+
+.table {
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 0;
+}
+
+.dashboard {
+  margin-left: 25px;
+}
+
+.clients-list-title {
+  margin-top: 10px;
+  height: 50px;
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h1 {
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 0;
+  }
+}
