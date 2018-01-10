@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, :except => [:create]
-  before_action :admin_only, :except => :show
+  before_action :admin_only, :except => [:show, :faq]
   # before_filter :authorize_admin, :only => :create
   prepend_before_filter :require_no_authentication, only: [:cancel]
 
@@ -59,6 +59,10 @@ class UsersController < ApplicationController
     user = User.find(params[:id])
     user.destroy
     redirect_to users_path, :notice => "User deleted."
+  end
+
+  def faq
+    render template: "client/faq"
   end
 
   private

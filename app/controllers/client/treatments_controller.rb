@@ -3,7 +3,7 @@ class Client::TreatmentsController < ApplicationController
 
    def index
      @treatments = current_user.treatments
-   end
+  end
 
    def show
    end

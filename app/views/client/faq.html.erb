@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="faq-title">
+    <h2>Les réponses à vos questions sur la réglementation des données personnelles</h2>
+  </div>
+
+  <div class="faq-questions">
+    <button class="accordion">Qu'est-ce qu'une donnée à caractère personnel ?</button>
+    <div class="panel">
+      <p>Les données sont considérées "à caractère personnel" dès lors qu’elles concernent des personnes physiques identifiées directement ou indirectement.</p>
+      <p>Une personne est identifiée lorsque par exemple son nom apparaît dans un fichier.</p>
+      <p>Une personne est identifiable lorsqu’un fichier comporte des informations permettant indirectement son identification (ex. : adresse IP, nom, n° d’immatriculation, n° de téléphone, photographie, éléments biométriques tels que l’empreinte digitale, ADN, numéro d’Identification Nationale Étudiant (INE), ensemble d’informations permettant de discriminer une personne au sein d’une population (certains fichiers statistiques) tels que, par exemple, le lieu de résidence et profession et sexe et age,....).</p>
+      <p>En ce sens, constituent également des données à caractère personnel toutes les informations dont le recoupement permet d’identifier une personne précise. (ex. : une empreinte digitale, l’ADN, une date de naissance associée à une commune de résidence …).</p>
+    </div>
+
+    <button class="accordion">Qu'est-ce qu'un traitement de données personnelles ?</button>
+    <div class="panel">
+      <p>Toute opération, ou ensemble d’opérations, portant sur des données permettant d'identifier un individu, quel que soit le procédé utilisé.</p>
+      <p>Exemples : collecte, enregistrement, organisation, conservation, adaptation, modification, extraction, consultation, utilisation, communication par transmission diffusion ou toute autre forme de mise à disposition, rapprochement ou interconnexion, verrouillage, effacement ou destruction de données personnelles, etc.</p>
+    </div>
+
+    <button class="accordion">Qu'est-ce qu'une donnée sensible ?</button>
+    <div class="panel">
+      <p>Information concernant l’origine raciale ou ethnique, les opinions politiques, philosophiques ou religieuses, l’appartenance syndicale, la santé ou la vie sexuelle. En principe, les données sensibles ne peuvent être recueillies et exploitées qu’avec le consentement explicite des personnes.</p>
+    </div>
+
+
+  </div>
+
+  <script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+  </script>
+</div>
+
+<h2>Vous avez une question ?
+<a href="mailto:vf.horizon@gmail.com" class="btn-treatment">POSER UNE QUESTION</a>
+</h2>

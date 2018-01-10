@@ -9,9 +9,14 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create, :index, :edit, :update, :destroy, :show] do
     resources :treatments, only: :index
+
   end
 
+  # resources :treatments, only: :index
+
   get "/question" => "pages#show", :as => '/question'
+
+  get "client/faq" => "users#faq", :as => 'client/faq'
 
   # post 'create_user' => 'users#create', as: :create_user
 
