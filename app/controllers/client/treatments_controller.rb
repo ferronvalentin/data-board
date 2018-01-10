@@ -16,7 +16,6 @@ class Client::TreatmentsController < ApplicationController
    def create
      @treatment = Treatment.new(treatment_params)
      @treatment.user = current_user
-
      if @treatment.save
        redirect_to client_treatments_path(@treatment)
      else
