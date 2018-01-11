@@ -45801,3 +45801,747 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 180ms (Views: 170.1ms | ActiveRecord: 2.0ms)
 
 
+Started GET "/users" for 127.0.0.1 at 2018-01-11 10:33:06 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (13.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from <class:UsersController> at /Users/Valentin/code/valloo75/data-board/app/controllers/users_controller.rb:5)
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (12.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (6.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "treatments"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/_user.html.erb (1.6ms)
+  Rendered users/_user.html.erb (0.3ms)
+  Rendered users/index.html.erb within layouts/application (41.0ms)
+  Rendered shared/_sidebar.html.erb (2.0ms)
+  Rendered shared/_navbar.html.erb (33.2ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 1501ms (Views: 1398.0ms | ActiveRecord: 57.2ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2018-01-11 10:33:16 +0100
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"restaurants"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "towns"[0m
+  [1m[36mTown Load (0.4ms)[0m  [1m[34mSELECT  "towns".* FROM "towns" ORDER BY "towns"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "treatments"[0m
+  [1m[36mTreatment Load (0.4ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" ORDER BY "treatments"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (53.9ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (8.5ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (190.7ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (6.1ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (10.1ms)
+Completed 404 Not Found in 1636ms (Views: 805.9ms | ActiveRecord: 11.3ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(109635186251985240);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (12.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAdminToUsers (20180111093721)
+  [1m[35m (6.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (77.6ms)[0m  [1m[35mALTER TABLE "users" ADD "admin" boolean DEFAULT 'f' NOT NULL[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180111093721"]]
+  [1m[35m (9.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (25.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(109635186251985240)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (32.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (25.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1 WHERE "users"."id" = $2[0m  [["updated_at", "2018-01-11 09:38:52.882274"], ["id", 2]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2018-01-11 10:39:20 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (9.7ms)
+  Rendered shared/_navbar-home.html.erb (53.0ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 1436ms (Views: 1424.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-01-11 10:39:23 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 46ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-01-11 10:39:23 +0100
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from <class:UsersController> at /Users/Valentin/code/valloo75/data-board/app/controllers/users_controller.rb:5)
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "treatments"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/_user.html.erb (2.3ms)
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/index.html.erb within layouts/application (47.6ms)
+  Rendered shared/_sidebar.html.erb (1.8ms)
+  Rendered shared/_navbar.html.erb (8.0ms)
+  Rendered shared/_flashes.html.erb (1.5ms)
+Completed 200 OK in 236ms (Views: 222.3ms | ActiveRecord: 7.2ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-01-11 10:39:26 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gk0dunI548nXHPbn01rEfOIqqWRznAPGdsiGQopYHzUVs+9NsjNZv19FMS2nGYr+4tH4vaBh8bmI+96w7+SHug=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-11 10:39:26 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.7ms)
+  Rendered shared/_navbar-home.html.erb (1.4ms)
+  Rendered shared/_flashes.html.erb (0.6ms)
+Completed 200 OK in 46ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2018-01-11 10:39:31 +0100
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"restaurants"}
+  [1m[35m (6.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "towns"[0m
+  [1m[36mTown Load (0.3ms)[0m  [1m[34mSELECT  "towns".* FROM "towns" ORDER BY "towns"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "treatments"[0m
+  [1m[36mTreatment Load (0.4ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" ORDER BY "treatments"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (35.5ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (6.8ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (110.9ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (6.5ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (6.0ms)
+Completed 404 Not Found in 1278ms (Views: 605.1ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-11 10:39:38 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.2ms)
+  Rendered shared/_navbar-home.html.erb (1.5ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 57ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-01-11 10:39:40 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 93ms (Views: 85.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2018-01-11 10:39:46 +0100
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"restaurants"}
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "towns"[0m
+  [1m[36mTown Load (0.4ms)[0m  [1m[34mSELECT  "towns".* FROM "towns" ORDER BY "towns"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "treatments"[0m
+  [1m[36mTreatment Load (0.3ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" ORDER BY "treatments"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (19.9ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.7ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (103.6ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (5.6ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (6.8ms)
+Completed 404 Not Found in 574ms (Views: 560.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-11 10:40:45 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (9.9ms)
+  Rendered shared/_navbar-home.html.erb (27.7ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 1205ms (Views: 1195.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-01-11 10:40:48 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 173ms (Views: 128.1ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2018-01-11 10:40:52 +0100
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"restaurants"}
+Redirected to http://localhost:3000/
+Filter chain halted as :_authorize! rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-11 10:40:52 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.7ms)
+  Rendered shared/_navbar-home.html.erb (1.9ms)
+  Rendered shared/_flashes.html.erb (0.5ms)
+Completed 200 OK in 67ms (Views: 63.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-01-11 10:40:59 +0100
+Processing by RailsAdmin::MainController#dashboard as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :_authorize! rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-11 10:40:59 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.3ms)
+  Rendered shared/_navbar-home.html.erb (1.4ms)
+  Rendered shared/_flashes.html.erb (0.8ms)
+Completed 200 OK in 56ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-01-11 10:41:01 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 81ms (Views: 78.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-01-11 10:41:06 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k2O6h6ZqDdvrxGp/fs6AHyos4s5EnQO9aG4i0R67S/ArNzWcndyqNInX5fVsC8JI8j60zNBj3PKbZhbzSiLGEw==", "user"=>{"email"=>"val@orizon.co", "password"=>"[FILTERED]"}, "commit"=>"Connexion"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "val@orizon.co"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2018-01-11 09:41:06.870246"], ["last_sign_in_at", "2018-01-11 09:20:01.892756"], ["sign_in_count", 23], ["updated_at", "2018-01-11 09:41:06.873184"], ["id", 1]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 242ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-01-11 10:41:06 +0100
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from <class:UsersController> at /Users/Valentin/code/valloo75/data-board/app/controllers/users_controller.rb:5)
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "treatments"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/_user.html.erb (1.2ms)
+  Rendered users/_user.html.erb (0.2ms)
+  Rendered users/index.html.erb within layouts/application (29.1ms)
+  Rendered shared/_sidebar.html.erb (1.1ms)
+  Rendered shared/_navbar.html.erb (3.0ms)
+  Rendered shared/_flashes.html.erb (0.6ms)
+Completed 200 OK in 98ms (Views: 88.8ms | ActiveRecord: 3.8ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-01-11 10:41:13 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iBuuFUcSMtO1sq9i4C6AJ8MCposgRorFZRPgU9Xy+Ctc8xZHNJPHu0wYBAGnCAIG1TvFhB7cULlQXTMmoD5IDw=="}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-11 10:41:13 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.2ms)
+  Rendered shared/_navbar-home.html.erb (1.2ms)
+  Rendered shared/_flashes.html.erb (0.7ms)
+Completed 200 OK in 51ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-01-11 10:41:14 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 87ms (Views: 85.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-01-11 10:41:19 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fCiTHbpr5xpYcSUI6QLM1mbfznXocstHZsh4i+V/9kJmu/XbUQe6DKyVNbAIpv8n0cgQZoY/22gaiSj383a1vA==", "user"=>{"email"=>"valou@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Connexion"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "valou@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2018-01-11 09:41:19.473162"], ["last_sign_in_at", "2018-01-11 09:14:12.052990"], ["sign_in_count", 16], ["updated_at", "2018-01-11 09:41:19.474897"], ["id", 2]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 206ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-01-11 10:41:19 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "treatments"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/_user.html.erb (1.1ms)
+  Rendered users/_user.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (12.6ms)
+  Rendered shared/_sidebar.html.erb (1.9ms)
+  Rendered shared/_navbar.html.erb (3.1ms)
+  Rendered shared/_flashes.html.erb (0.8ms)
+Completed 200 OK in 100ms (Views: 93.7ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-01-11 10:41:22 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LhCY/A2aX3AkpyW4UvvBgPYPKphlP9UABKeq0F2tX3gIvXO55pJHLh00UU3K667bwsu5cQPmdEGyppgzq92p5g=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-11 10:41:22 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.5ms)
+  Rendered shared/_navbar-home.html.erb (1.5ms)
+  Rendered shared/_flashes.html.erb (0.8ms)
+Completed 200 OK in 49ms (Views: 45.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-01-11 10:41:23 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (18.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (45.0ms)
+Completed 200 OK in 323ms (Views: 320.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-01-11 10:41:29 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hdCmWCNBRqnYhnwR97na5yL77U75EBw6BhJAXLXUp1srEf98y7eJ0Mlzs6eDfQIcFz+Xf1R2d85Gio8Eah3xWw==", "user"=>{"email"=>"val@orizon.co", "password"=>"[FILTERED]"}, "commit"=>"Connexion"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "val@orizon.co"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.9ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2018-01-11 09:41:29.732432"], ["last_sign_in_at", "2018-01-11 09:41:06.870246"], ["sign_in_count", 24], ["updated_at", "2018-01-11 09:41:29.733817"], ["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 198ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-01-11 10:41:29 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "treatments"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/_user.html.erb (0.9ms)
+  Rendered users/_user.html.erb (0.3ms)
+  Rendered users/index.html.erb within layouts/application (11.2ms)
+  Rendered shared/_sidebar.html.erb (1.1ms)
+  Rendered shared/_navbar.html.erb (2.6ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 82ms (Views: 76.7ms | ActiveRecord: 1.5ms)
+
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "role" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2018-01-11 09:42:28.031489"], ["role", 1], ["id", 1]]
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-01-11 10:42:48 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7xfaBzuh3adkC3NVsvwnTwixeomtoYvjDxy6FVAl6qCl3wL67B4llSy67fo7UHyvc3LIn9QTMRrWAS1IHKAKKg=="}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 83ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-11 10:42:48 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (3.7ms)
+  Rendered shared/_navbar-home.html.erb (16.2ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 1394ms (Views: 1387.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-01-11 10:42:51 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 141ms (Views: 130.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-01-11 10:42:58 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0mFJfbKP53OFbPWntKkQ572GZ+pCTrts5wCaa69YNjUABUkvQlvbimqndvLW7RzT+Jnul1SDdFp6Ps4ihicQUA==", "user"=>{"email"=>"val@orizon.co", "password"=>"[FILTERED]"}, "commit"=>"Connexion"}
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "val@orizon.co"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2018-01-11 09:42:58.556820"], ["last_sign_in_at", "2018-01-11 09:41:29.732432"], ["sign_in_count", 25], ["updated_at", "2018-01-11 09:42:58.560103"], ["id", 1]]
+  [1m[35m (21.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/client/treatments
+Completed 302 Found in 279ms (ActiveRecord: 26.6ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2018-01-11 10:42:58 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.7ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (46.4ms)
+  Rendered shared/_sidebar.html.erb (2.9ms)
+  Rendered shared/_navbar.html.erb (3.9ms)
+  Rendered shared/_flashes.html.erb (1.5ms)
+Completed 200 OK in 160ms (Views: 122.1ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-01-11 10:43:06 +0100
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :_authorize! rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-11 10:43:06 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.5ms)
+  Rendered shared/_navbar-home.html.erb (2.4ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 73ms (Views: 69.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-01-11 10:43:12 +0100
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :_authorize! rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-11 10:43:12 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.4ms)
+  Rendered shared/_navbar-home.html.erb (2.4ms)
+  Rendered shared/_flashes.html.erb (0.8ms)
+Completed 200 OK in 68ms (Views: 64.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-01-11 10:43:14 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/client/treatments
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2018-01-11 10:43:14 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (7.1ms)
+  Rendered shared/_sidebar.html.erb (1.4ms)
+  Rendered shared/_navbar.html.erb (2.9ms)
+  Rendered shared/_flashes.html.erb (0.8ms)
+Completed 200 OK in 124ms (Views: 108.4ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-01-11 10:43:18 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eORPYBv0h9Lxij2hrM2MXMMdoJ0G3x53aYB9Edg2Iso+9Iwaa3OvjA/fwpb1bz7aQgittXjuMwfCre9+7Fr7oQ=="}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-11 10:43:18 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.9ms)
+  Rendered shared/_navbar-home.html.erb (1.5ms)
+  Rendered shared/_flashes.html.erb (0.5ms)
+Completed 200 OK in 73ms (Views: 66.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-01-11 10:43:19 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 106ms (Views: 103.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-01-11 10:43:24 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mPjeq9RAyhZyayqI/UcBV+e8DLhWUwU5KlYG9w+DrPRHUx5bt7WSAEZ5e1RXGDAjow96jtdG4Ojv4LZmUWbxsg==", "user"=>{"email"=>"valou@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Connexion"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "valou@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2018-01-11 09:43:24.251357"], ["last_sign_in_at", "2018-01-11 09:41:19.473162"], ["sign_in_count", 17], ["updated_at", "2018-01-11 09:43:24.253109"], ["id", 2]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 203ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-01-11 10:43:24 +0100
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from <class:UsersController> at /Users/Valentin/code/valloo75/data-board/app/controllers/users_controller.rb:5)
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "treatments"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/_user.html.erb (1.6ms)
+  Rendered users/_user.html.erb (0.3ms)
+  Rendered users/index.html.erb within layouts/application (14.8ms)
+  Rendered shared/_sidebar.html.erb (1.3ms)
+  Rendered shared/_navbar.html.erb (3.5ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 92ms (Views: 84.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-01-11 10:43:28 +0100
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :_authorize! rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-11 10:43:28 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.4ms)
+  Rendered shared/_navbar-home.html.erb (1.9ms)
+  Rendered shared/_flashes.html.erb (0.7ms)
+Completed 200 OK in 65ms (Views: 59.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "admin" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2018-01-11 09:44:08.824767"], ["admin", "t"], ["id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-01-11 10:44:31 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 84ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-01-11 10:44:32 +0100
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from <class:UsersController> at /Users/Valentin/code/valloo75/data-board/app/controllers/users_controller.rb:5)
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "treatments"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/_user.html.erb (1.5ms)
+  Rendered users/_user.html.erb (0.3ms)
+  Rendered users/index.html.erb within layouts/application (30.0ms)
+  Rendered shared/_sidebar.html.erb (1.8ms)
+  Rendered shared/_navbar.html.erb (3.7ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 1403ms (Views: 1393.5ms | ActiveRecord: 4.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-01-11 10:44:38 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bsE/T120rY8iHASU9uamln/pYJ1+f0az1Vt+3Fkldxbb1KSjdWRPRfBzTN/3hxvpY5e2/fuZlldPWtV8dV1Tmw=="}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-11 10:44:39 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.8ms)
+  Rendered shared/_navbar-home.html.erb (2.2ms)
+  Rendered shared/_flashes.html.erb (0.7ms)
+Completed 200 OK in 78ms (Views: 72.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-01-11 10:44:41 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 120ms (Views: 106.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-01-11 10:44:50 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0I+d6hRJmMKpvGfTUB5Uydpzi69cYC7kVhdwCqqi1Yp4uxspT0D1NrC5QA8nXZ+qOjpNkCQbIhqYv+HcnzkzbA==", "user"=>{"email"=>"val@orizon.co", "password"=>"[FILTERED]"}, "commit"=>"Connexion"}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "val@orizon.co"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2018-01-11 09:44:50.252158"], ["last_sign_in_at", "2018-01-11 09:42:58.556820"], ["sign_in_count", 26], ["updated_at", "2018-01-11 09:44:50.256499"], ["id", 1]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/client/treatments
+Completed 302 Found in 310ms (ActiveRecord: 10.9ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2018-01-11 10:44:50 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.4ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (55.1ms)
+  Rendered shared/_sidebar.html.erb (1.3ms)
+  Rendered shared/_navbar.html.erb (2.4ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 153ms (Views: 119.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-01-11 10:44:53 +0100
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :_authorize! rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-11 10:44:53 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.5ms)
+  Rendered shared/_navbar-home.html.erb (2.4ms)
+  Rendered shared/_flashes.html.erb (2.1ms)
+Completed 200 OK in 156ms (Views: 150.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-01-11 10:44:55 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/client/treatments
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2018-01-11 10:44:55 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.6ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered client/treatments/index.html.erb within layouts/application (7.6ms)
+  Rendered shared/_sidebar.html.erb (1.3ms)
+  Rendered shared/_navbar.html.erb (3.9ms)
+  Rendered shared/_flashes.html.erb (1.5ms)
+Completed 200 OK in 96ms (Views: 89.2ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-01-11 10:44:57 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TOoSMg4YhEi8Z7zvoIL1ETARkZAsXqYvxS9OZB4o+xv53Vu8TqzRQXOKc7LCOts3Mux9ZTbsuXmsMhIx1U0TMw=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-11 10:44:57 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.2ms)
+  Rendered shared/_navbar-home.html.erb (1.5ms)
+  Rendered shared/_flashes.html.erb (0.7ms)
+Completed 200 OK in 55ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-01-11 10:44:59 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 87ms (Views: 84.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-01-11 10:45:04 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2658BD2fzZB7XLREPCf33Cut0tpdLZSVh+jxne/SvNTvvQ1mxzOoUgOW9EPSJfGJ1K2QfIVvUVzC4slnPGtLCQ==", "user"=>{"email"=>"valou@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Connexion"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "valou@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2018-01-11 09:45:04.240257"], ["last_sign_in_at", "2018-01-11 09:43:24.251357"], ["sign_in_count", 18], ["updated_at", "2018-01-11 09:45:04.242114"], ["id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 197ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-01-11 10:45:04 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "treatments"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/_user.html.erb (1.9ms)
+  Rendered users/_user.html.erb (0.3ms)
+  Rendered users/index.html.erb within layouts/application (15.1ms)
+  Rendered shared/_sidebar.html.erb (1.3ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+  Rendered shared/_flashes.html.erb (0.7ms)
+Completed 200 OK in 100ms (Views: 92.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-01-11 10:45:08 +0100
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "towns"[0m
+  [1m[36mTown Load (0.3ms)[0m  [1m[34mSELECT  "towns".* FROM "towns" ORDER BY "towns"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "treatments"[0m
+  [1m[36mTreatment Load (0.3ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" ORDER BY "treatments"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (44.3ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (7.4ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (29.3ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (8.2ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (14.3ms)
+Completed 200 OK in 1038ms (Views: 255.8ms | ActiveRecord: 6.9ms)
+
+
