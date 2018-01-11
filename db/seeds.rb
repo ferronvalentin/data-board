@@ -9,7 +9,7 @@ val = User.create!(
   email: "val@orizon.co",
   password: "123123",
   role: 2,
-  admin: false,
+  admin: true,
   )
 print "👶 "
 print '///Created 1 User...///'
