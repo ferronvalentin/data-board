@@ -17,6 +17,8 @@ require "csv"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+ENV['RAILS_ADMIN_THEME'] = 'rollincode'
+
 module OrizonApp
   class Application < Rails::Application
     config.generators do |generate|

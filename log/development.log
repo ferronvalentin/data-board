@@ -47524,3 +47524,374 @@ Processing by RailsAdmin::MainController#index as HTML
 Completed 404 Not Found in 1461ms (Views: 697.1ms | ActiveRecord: 12.1ms)
 
 
+Started GET "/admin/restaurants" for 127.0.0.1 at 2018-01-11 14:28:19 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (23.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"restaurants"}
+  [1m[36mUser Load (29.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from <class:UsersController> at /Users/Valentin/code/valloo75/data-board/app/controllers/users_controller.rb:5)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "towns"[0m
+  [1m[36mTown Load (0.5ms)[0m  [1m[34mSELECT  "towns".* FROM "towns" ORDER BY "towns"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "treatments"[0m
+  [1m[36mTreatment Load (0.3ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" ORDER BY "treatments"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (89.3ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (11.2ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (170.2ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (11.3ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (14.3ms)
+Completed 404 Not Found in 3913ms (Views: 2814.0ms | ActiveRecord: 99.8ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2018-01-11 14:34:03 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (13.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"restaurants"}
+  [1m[36mUser Load (13.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from <class:UsersController> at /Users/Valentin/code/valloo75/data-board/app/controllers/users_controller.rb:5)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "towns"[0m
+  [1m[36mTown Load (0.4ms)[0m  [1m[34mSELECT  "towns".* FROM "towns" ORDER BY "towns"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "treatments"[0m
+  [1m[36mTreatment Load (0.3ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" ORDER BY "treatments"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (43.8ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.4ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (155.7ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (4.9ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (10.2ms)
+Completed 404 Not Found in 2874ms (Views: 2116.0ms | ActiveRecord: 47.1ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-01-11 14:35:14 +0100
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (156.5ms)
+Completed 200 OK in 325ms (Views: 193.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/admin/user/export?model_name=user" for 127.0.0.1 at 2018-01-11 14:35:58 +0100
+Processing by RailsAdmin::MainController#export as HTML
+  Parameters: {"model_name"=>"user"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/export.html.haml within layouts/rails_admin/application
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT ''::text AS str;[0m
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/export.html.haml within layouts/rails_admin/application (254.4ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (7.4ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (22.3ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (7.0ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (33.3ms)
+Completed 200 OK in 621ms (Views: 485.3ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/admin/user" for 127.0.0.1 at 2018-01-11 14:36:01 +0100
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (108.0ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (9.8ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (40.3ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (18.8ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (30.4ms)
+Completed 200 OK in 408ms (Views: 392.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/user?model_name=user&utf8=%E2%9C%93&f%5Bpassword%5D%5B77687%5D%5Bv%5D=[FILTERED]&query=&_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-01-11 14:36:13 +0100
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "utf8"=>"✓", "f"=>{"password"=>"[FILTERED]"}, "query"=>"", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (127.9ms)
+Completed 200 OK in 290ms (Views: 164.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/admin/user/2/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-01-11 14:36:19 +0100
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (6.7ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (2.7ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (4.8ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.7ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (2.4ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.9ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.9ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.8ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.6ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (1.1ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (54.3ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_enumeration.html.haml (6.3ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_boolean.html.haml (8.2ms)
+  [1m[36mTreatment Load (0.4ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "treatments"[0m
+  [1m[36mTreatment Load (0.7ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" ORDER BY treatments.id desc[0m
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_filtering_multiselect.html.haml (64.0ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (12.1ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (323.6ms)
+Completed 200 OK in 374ms (Views: 356.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/admin/user?f%5Bpassword%5D%5B77687%5D%5Bv%5D=[FILTERED]&model_name=user&set=1&_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-01-11 14:36:42 +0100
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"f"=>{"password"=>"[FILTERED]"}, "model_name"=>"user", "set"=>"1", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (195.9ms)
+Completed 200 OK in 358ms (Views: 232.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/admin/user?model_name=user&utf8=%E2%9C%93&f%5Bpassword%5D%5B77687%5D%5Bv%5D=[FILTERED]&query=" for 127.0.0.1 at 2018-01-11 14:44:22 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (18.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "utf8"=>"✓", "f"=>{"password"=>"[FILTERED]"}, "query"=>""}
+  [1m[36mUser Load (18.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from <class:UsersController> at /Users/Valentin/code/valloo75/data-board/app/controllers/users_controller.rb:5)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (143.3ms)
+Started GET "/admin/town?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-01-11 14:44:47 +0100
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"town"}
+  [1m[36mUser Load (21.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mTown Load (8.6ms)[0m  [1m[34mSELECT  "towns".* FROM "towns" ORDER BY towns.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (305.0ms)
+Completed 200 OK in 501ms (Views: 396.0ms | ActiveRecord: 49.9ms)
+
+
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (14.8ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (40.0ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (11.8ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (21.4ms)
+Completed 200 OK in 27806ms (Views: 26972.3ms | ActiveRecord: 52.4ms)
+
+
+Started GET "/admin/treatment?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-01-11 14:44:56 +0100
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"treatment"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mTreatment Load (1.8ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" ORDER BY treatments.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (95.6ms)
+Completed 200 OK in 230ms (Views: 123.0ms | ActiveRecord: 14.8ms)
+
+
+Started GET "/admin/town?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-01-11 14:44:59 +0100
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"town"}
+  [1m[36mUser Load (20.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mTown Load (0.6ms)[0m  [1m[34mSELECT  "towns".* FROM "towns" ORDER BY towns.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (164.3ms)
+Completed 200 OK in 273ms (Views: 237.7ms | ActiveRecord: 21.2ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-01-11 14:45:08 +0100
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (78.5ms)
+Completed 200 OK in 126ms (Views: 105.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/admin/user/2/delete?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-01-11 14:45:13 +0100
+Processing by RailsAdmin::MainController#delete as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"2"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/delete.html.haml within layouts/rails_admin/pjax
+  [1m[36mTreatment Load (0.6ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_delete_notice.html.haml (37.5ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/delete.html.haml within layouts/rails_admin/pjax (60.0ms)
+Completed 200 OK in 112ms (Views: 92.6ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/admin/user/1?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-01-11 14:45:21 +0100
+Processing by RailsAdmin::MainController#show as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/pjax
+  [1m[36mTreatment Load (0.3ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/pjax (15.8ms)
+Completed 200 OK in 61ms (Views: 45.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admin/?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-01-11 14:45:40 +0100
+Processing by RailsAdmin::MainController#dashboard as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "towns"[0m
+  [1m[36mTown Load (0.5ms)[0m  [1m[34mSELECT  "towns".* FROM "towns" ORDER BY "towns"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "treatments"[0m
+  [1m[36mTreatment Load (3.2ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" ORDER BY "treatments"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax (72.6ms)
+Completed 200 OK in 325ms (Views: 246.8ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2018-01-11 14:47:50 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from <class:UsersController> at /Users/Valentin/code/valloo75/data-board/app/controllers/users_controller.rb:5)
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "towns"[0m
+  [1m[36mTown Load (0.4ms)[0m  [1m[34mSELECT  "towns".* FROM "towns" ORDER BY "towns"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "treatments"[0m
+  [1m[36mTreatment Load (0.5ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" ORDER BY "treatments"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (54.2ms)
+Started GET "/admin/treatment?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-01-11 14:48:12 +0100
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"treatment"}
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mTreatment Load (10.1ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" ORDER BY treatments.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (403.8ms)
+Completed 200 OK in 525ms (Views: 459.5ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-01-11 14:48:15 +0100
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (7.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (303.1ms)
+Completed 200 OK in 405ms (Views: 372.1ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/admin/town?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-01-11 14:48:18 +0100
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"town"}
+  [1m[36mUser Load (10.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mTown Load (5.0ms)[0m  [1m[34mSELECT  "towns".* FROM "towns" ORDER BY towns.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (104.9ms)
+Completed 200 OK in 199ms (Views: 142.4ms | ActiveRecord: 21.8ms)
+
+
+Started GET "/admin/?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-01-11 14:48:20 +0100
+Processing by RailsAdmin::MainController#dashboard as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (123.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (7.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "towns"[0m
+  [1m[36mTown Load (2.2ms)[0m  [1m[34mSELECT  "towns".* FROM "towns" ORDER BY "towns"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (32.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "treatments"[0m
+  [1m[36mTreatment Load (12.5ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" ORDER BY "treatments"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (5.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (7.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax (33.1ms)
+Completed 200 OK in 449ms (Views: 235.3ms | ActiveRecord: 190.8ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-01-11 14:48:25 +0100
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (12.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (235.1ms)
+Completed 200 OK in 341ms (Views: 307.1ms | ActiveRecord: 13.7ms)
+
+
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (9.9ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (47.5ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (10.4ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (14.8ms)
+Completed 200 OK in 35610ms (Views: 34722.9ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/admin/treatment?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-01-11 14:48:36 +0100
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"treatment"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mTreatment Load (1.4ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" ORDER BY treatments.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (144.6ms)
+Completed 200 OK in 257ms (Views: 197.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-01-11 14:48:37 +0100
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (185.0ms)
+Completed 200 OK in 252ms (Views: 232.1ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/admin/treatment?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-01-11 14:48:40 +0100
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"treatment"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mTreatment Load (0.7ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" ORDER BY treatments.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (179.5ms)
+Completed 200 OK in 268ms (Views: 241.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/admin/treatment/new?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-01-11 14:48:42 +0100
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"treatment"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY users.id desc[0m
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_filtering_select.html.haml (25.9ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (6.1ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (5.0ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.8ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.8ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.7ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (20.6ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (219.1ms)
+Completed 200 OK in 274ms (Views: 256.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-01-11 14:48:53 +0100
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (98.9ms)
+Completed 200 OK in 155ms (Views: 137.0ms | ActiveRecord: 1.4ms)
+
+
