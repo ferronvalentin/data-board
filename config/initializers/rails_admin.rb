@@ -1,6 +1,5 @@
 RailsAdmin.config do |config|
-  config.authorize_with do |controller|
-    redirect_to main_app.root_path unless current_user && current_user.admin
+  config.attr_accessible_role { _current_user.admin.to_sym }
   end
 
   ### Popular gems integration
