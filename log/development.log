@@ -48172,3 +48172,178 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 281ms (Views: 269.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-01-24 11:18:36 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (25.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (10.8ms)
+  Rendered shared/_navbar-home.html.erb (30.2ms)
+  Rendered shared/_flashes.html.erb (0.8ms)
+Completed 200 OK in 1465ms (Views: 1451.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-01-24 11:18:59 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 157ms (Views: 90.8ms | ActiveRecord: 36.9ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-01-24 11:19:05 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lmy8Hq1mNRralbQGgFpD8aUEsF1FlZ2Ep/9XW0dD1O+TcKJix0pIdexUvECUs69vukXL64EljJxX7zrfxrw2Fg==", "user"=>{"email"=>"valou@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Connexion"}
+  [1m[36mUser Load (29.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "valou@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (6.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (23.0ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["current_sign_in_at", "2018-01-24 10:19:05.279323"], ["sign_in_count", 2], ["updated_at", "2018-01-24 10:19:05.287843"], ["id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/client/treatments
+Completed 302 Found in 290ms (ActiveRecord: 60.0ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2018-01-24 11:19:05 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (17.4ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered client/treatments/index.html.erb within layouts/application (40.0ms)
+  Rendered shared/_sidebar.html.erb (1.0ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 131ms (Views: 82.7ms | ActiveRecord: 20.4ms)
+
+
+Started GET "/client/treatments/new" for 127.0.0.1 at 2018-01-24 11:19:13 +0100
+Processing by Client::TreatmentsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering client/treatments/new.html.erb within layouts/application
+  Rendered client/treatments/_form.html.erb (23.9ms)
+  Rendered client/treatments/new.html.erb within layouts/application (29.4ms)
+  Rendered shared/_sidebar.html.erb (1.1ms)
+  Rendered shared/_navbar.html.erb (1.9ms)
+  Rendered shared/_flashes.html.erb (0.6ms)
+Completed 200 OK in 130ms (Views: 96.3ms | ActiveRecord: 8.1ms)
+
+
+Started POST "/client/treatments" for 127.0.0.1 at 2018-01-24 11:24:35 +0100
+Processing by Client::TreatmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qS3mp1n7bMXA+d1tovz5xmNHF0QYBNmCeQU559JZO1kCBLKJWKYNjtyhEY7EVJOipnh1IAfnbj3yN+RAcKVq3g==", "treatment"=>{"name"=>"", "start_date(1i)"=>"2018", "start_date(2i)"=>"1", "start_date(3i)"=>"24", "main_purpose"=>"", "other_purpose"=>"", "service_concerned"=>"", "service_function"=>"", "category_people_concerned"=>"", "personal_data"=>"", "sensitive_data"=>"", "recipient"=>"", "storage_time(1i)"=>"2018", "storage_time(2i)"=>"1", "storage_time(3i)"=>"24", "observation"=>""}, "commit"=>"CONFIRMER"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (30.7ms)[0m  [1m[32mINSERT INTO "treatments" ("user_id", "name", "start_date", "main_purpose", "other_purpose", "service_concerned", "service_function", "category_people_concerned", "personal_data", "sensitive_data", "recipient", "storage_time", "observation", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["user_id", 2], ["name", ""], ["start_date", "2018-01-24"], ["main_purpose", ""], ["other_purpose", ""], ["service_concerned", ""], ["service_function", ""], ["category_people_concerned", ""], ["personal_data", ""], ["sensitive_data", ""], ["recipient", ""], ["storage_time", "2018-01-24"], ["observation", ""], ["created_at", "2018-01-24 10:24:35.517048"], ["updated_at", "2018-01-24 10:24:35.517048"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/client/treatments.2
+Completed 302 Found in 115ms (ActiveRecord: 33.4ms)
+
+
+Started GET "/client/treatments.2" for 127.0.0.1 at 2018-01-24 11:24:35 +0100
+Processing by Client::TreatmentsController#index as 
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (1.3ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered client/treatments/index.html.erb within layouts/application (20.4ms)
+  Rendered shared/_sidebar.html.erb (1.7ms)
+  Rendered shared/_navbar.html.erb (7.5ms)
+  Rendered shared/_flashes.html.erb (1.3ms)
+Completed 200 OK in 309ms (Views: 255.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/client/treatments/2" for 127.0.0.1 at 2018-01-24 11:24:38 +0100
+Processing by Client::TreatmentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTreatment Load (0.3ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering client/treatments/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered client/treatments/show.html.erb within layouts/application (8.3ms)
+  Rendered shared/_sidebar.html.erb (1.6ms)
+  Rendered shared/_navbar.html.erb (2.3ms)
+  Rendered shared/_flashes.html.erb (0.7ms)
+Completed 200 OK in 101ms (Views: 85.3ms | ActiveRecord: 2.8ms)
+
+
+Started DELETE "/client/treatments/2" for 127.0.0.1 at 2018-01-24 11:24:41 +0100
+Processing by Client::TreatmentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"i3PYvv10C0+xZo6In1XoFfmqjCf5xXhVRx9Dcnvb62UgWoyQ/ClqBK0+Qmv5/YJxPJXuQ+Ymz+rMLZ7V2Se64g==", "id"=>"2"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTreatment Load (2.4ms)[0m  [1m[34mSELECT  "treatments".* FROM "treatments" WHERE "treatments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.1ms)[0m  [1m[31mDELETE FROM "treatments" WHERE "treatments"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/client/treatments
+Completed 302 Found in 17ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2018-01-24 11:24:41 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.4ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered client/treatments/index.html.erb within layouts/application (3.8ms)
+  Rendered shared/_sidebar.html.erb (1.1ms)
+  Rendered shared/_navbar.html.erb (3.5ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 85ms (Views: 78.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/client/faq" for 127.0.0.1 at 2018-01-24 11:24:45 +0100
+DEPRECATION WARNING: prepend_before_filter is deprecated and will be removed in Rails 5.1. Use prepend_before_action instead. (called from <class:UsersController> at /Users/Valentin/code/valloo75/data-board/app/controllers/users_controller.rb:5)
+Processing by UsersController#faq as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering client/faq.html.erb within layouts/application
+  Rendered client/faq.html.erb within layouts/application (0.9ms)
+  Rendered shared/_sidebar.html.erb (1.1ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+  Rendered shared/_flashes.html.erb (0.7ms)
+Completed 200 OK in 67ms (Views: 63.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/restaurants" for 127.0.0.1 at 2018-01-24 11:31:03 +0100
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"restaurants"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :_authorize! rendered or redirected
+Completed 302 Found in 22ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 11:31:03 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (4.0ms)
+  Rendered shared/_navbar-home.html.erb (2.7ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 88ms (Views: 82.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-01-24 11:31:05 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/client/treatments
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/client/treatments" for 127.0.0.1 at 2018-01-24 11:31:05 +0100
+Processing by Client::TreatmentsController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering client/treatments/index.html.erb within layouts/application
+  [1m[36mTreatment Load (0.7ms)[0m  [1m[34mSELECT "treatments".* FROM "treatments" WHERE "treatments"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered client/treatments/index.html.erb within layouts/application (7.5ms)
+  Rendered shared/_sidebar.html.erb (2.1ms)
+  Rendered shared/_navbar.html.erb (4.6ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 115ms (Views: 102.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/client/faq" for 127.0.0.1 at 2018-01-24 11:31:12 +0100
+Processing by UsersController#faq as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering client/faq.html.erb within layouts/application
+  Rendered client/faq.html.erb within layouts/application (0.9ms)
+  Rendered shared/_sidebar.html.erb (1.2ms)
+  Rendered shared/_navbar.html.erb (2.4ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 77ms (Views: 72.2ms | ActiveRecord: 0.8ms)
+
+
