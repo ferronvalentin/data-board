@@ -48413,3 +48413,991 @@ puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
   Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
   Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (286.9ms)
+Started GET "/" for 127.0.0.1 at 2018-01-31 11:20:09 +0100
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  
+pg (0.21.0) lib/pg.rb:56:in `initialize'
+pg (0.21.0) lib/pg.rb:56:in `new'
+pg (0.21.0) lib/pg.rb:56:in `connect'
+activerecord (5.0.6) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
+activerecord (5.0.6) lib/active_record/connection_adapters/postgresql_adapter.rb:217:in `initialize'
+activerecord (5.0.6) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `new'
+activerecord (5.0.6) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (5.0.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:729:in `new_connection'
+activerecord (5.0.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:773:in `checkout_new_connection'
+activerecord (5.0.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:752:in `try_to_checkout_new_connection'
+activerecord (5.0.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:713:in `acquire_connection'
+activerecord (5.0.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:490:in `checkout'
+activerecord (5.0.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:364:in `connection'
+activerecord (5.0.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:883:in `retrieve_connection'
+activerecord (5.0.6) lib/active_record/connection_handling.rb:128:in `retrieve_connection'
+activerecord (5.0.6) lib/active_record/connection_handling.rb:91:in `connection'
+activerecord (5.0.6) lib/active_record/migration.rb:559:in `connection'
+activerecord (5.0.6) lib/active_record/migration.rb:546:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.6) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.6) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.6) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.6) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (188.0ms)
+Started GET "/" for 127.0.0.1 at 2018-01-31 11:21:40 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (24.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (8.9ms)
+Started GET "/" for 127.0.0.1 at 2018-01-31 11:22:01 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.9ms)
+Started GET "/" for 127.0.0.1 at 2018-01-31 11:22:06 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.6ms)
+  Rendered shared/_navbar-home.html.erb (1076.1ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 34382ms (Views: 34372.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 11:22:17 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.2ms)
+  Rendered shared/_navbar-home.html.erb (4.0ms)
+  Rendered shared/_flashes.html.erb (1.7ms)
+Completed 200 OK in 166ms (Views: 160.8ms | ActiveRecord: 0.0ms)
+
+
+  Rendered shared/_navbar-home.html.erb (4.5ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 22105ms (Views: 22099.6ms | ActiveRecord: 0.0ms)
+
+
+  Rendered shared/_navbar-home.html.erb (2.1ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 19376ms (Views: 19371.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 11:26:40 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (9.0ms)
+  Rendered shared/_navbar-home.html.erb (7.4ms)
+  Rendered shared/_flashes.html.erb (1.9ms)
+Completed 200 OK in 208ms (Views: 194.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 11:28:19 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.6ms)
+  Rendered shared/_navbar-home.html.erb (1.6ms)
+  Rendered shared/_flashes.html.erb (1.3ms)
+Completed 200 OK in 75ms (Views: 71.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 11:30:10 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (11.0ms)
+  Rendered shared/_navbar-home.html.erb (4.8ms)
+  Rendered shared/_flashes.html.erb (2.1ms)
+Completed 200 OK in 157ms (Views: 144.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 11:35:15 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (14.0ms)
+  Rendered shared/_navbar-home.html.erb (5.5ms)
+  Rendered shared/_flashes.html.erb (2.8ms)
+Completed 200 OK in 224ms (Views: 214.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 11:35:53 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (3.8ms)
+  Rendered shared/_navbar-home.html.erb (7.5ms)
+  Rendered shared/_flashes.html.erb (1.2ms)
+Completed 200 OK in 142ms (Views: 136.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 11:36:19 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (7.1ms)
+  Rendered shared/_navbar-home.html.erb (6.5ms)
+  Rendered shared/_flashes.html.erb (2.0ms)
+Completed 200 OK in 127ms (Views: 119.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 11:36:36 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.6ms)
+  Rendered shared/_navbar-home.html.erb (4.8ms)
+  Rendered shared/_flashes.html.erb (1.8ms)
+Completed 200 OK in 105ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 11:36:50 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.7ms)
+  Rendered shared/_navbar-home.html.erb (4.1ms)
+  Rendered shared/_flashes.html.erb (1.5ms)
+Completed 200 OK in 108ms (Views: 103.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 11:40:14 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (11.9ms)
+  Rendered shared/_navbar-home.html.erb (11.2ms)
+  Rendered shared/_flashes.html.erb (2.3ms)
+Completed 200 OK in 240ms (Views: 226.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 11:45:26 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (10.5ms)
+  Rendered shared/_navbar-home.html.erb (4.1ms)
+  Rendered shared/_flashes.html.erb (5.4ms)
+Completed 200 OK in 11201ms (Views: 11186.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 11:46:58 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (9.9ms)
+  Rendered shared/_navbar-home.html.erb (6.0ms)
+  Rendered shared/_flashes.html.erb (2.9ms)
+Completed 200 OK in 255ms (Views: 244.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 11:49:55 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (8.6ms)
+  Rendered shared/_navbar-home.html.erb (6.7ms)
+  Rendered shared/_flashes.html.erb (2.5ms)
+Completed 200 OK in 205ms (Views: 194.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 11:50:49 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.2ms)
+  Rendered shared/_navbar-home.html.erb (8.1ms)
+  Rendered shared/_flashes.html.erb (1.3ms)
+Completed 200 OK in 135ms (Views: 129.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 11:51:01 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.7ms)
+  Rendered shared/_navbar-home.html.erb (2.5ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 79ms (Views: 74.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 11:52:13 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (8.0ms)
+  Rendered shared/_navbar-home.html.erb (3.9ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 11058ms (Views: 11048.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:06:15 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (18.7ms)
+  Rendered shared/_navbar-home.html.erb (6.3ms)
+  Rendered shared/_flashes.html.erb (2.4ms)
+Completed 200 OK in 424ms (Views: 411.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:06:37 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.7ms)
+  Rendered shared/_navbar-home.html.erb (3.5ms)
+  Rendered shared/_flashes.html.erb (2.5ms)
+Completed 200 OK in 303ms (Views: 297.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:07:29 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (13.3ms)
+  Rendered shared/_navbar-home.html.erb (6.1ms)
+  Rendered shared/_flashes.html.erb (2.8ms)
+Completed 200 OK in 178ms (Views: 173.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:07:40 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.6ms)
+  Rendered shared/_navbar-home.html.erb (2.6ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 95ms (Views: 89.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:09:42 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (9.4ms)
+  Rendered shared/_navbar-home.html.erb (5.3ms)
+  Rendered shared/_flashes.html.erb (1.9ms)
+Completed 200 OK in 171ms (Views: 160.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:10:07 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (3.1ms)
+  Rendered shared/_navbar-home.html.erb (4.9ms)
+  Rendered shared/_flashes.html.erb (3.1ms)
+Completed 200 OK in 136ms (Views: 131.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:11:14 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (3.0ms)
+  Rendered shared/_navbar-home.html.erb (2.5ms)
+  Rendered shared/_flashes.html.erb (1.4ms)
+Completed 200 OK in 107ms (Views: 102.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:11:53 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.9ms)
+  Rendered shared/_navbar-home.html.erb (2.2ms)
+  Rendered shared/_flashes.html.erb (1.2ms)
+Completed 200 OK in 82ms (Views: 72.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:12:18 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.0ms)
+  Rendered shared/_navbar-home.html.erb (1.5ms)
+  Rendered shared/_flashes.html.erb (0.7ms)
+Completed 200 OK in 66ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:12:30 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.2ms)
+  Rendered shared/_navbar-home.html.erb (2.4ms)
+  Rendered shared/_flashes.html.erb (1.2ms)
+Completed 200 OK in 83ms (Views: 78.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:15:40 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.9ms)
+  Rendered shared/_navbar-home.html.erb (2.4ms)
+  Rendered shared/_flashes.html.erb (0.8ms)
+Completed 200 OK in 58ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:16:22 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.8ms)
+  Rendered shared/_navbar-home.html.erb (2.5ms)
+  Rendered shared/_flashes.html.erb (1.2ms)
+Completed 200 OK in 84ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:17:13 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (4.4ms)
+  Rendered shared/_navbar-home.html.erb (2.2ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 87ms (Views: 84.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:19:28 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (8.3ms)
+  Rendered shared/_navbar-home.html.erb (5.2ms)
+  Rendered shared/_flashes.html.erb (1.9ms)
+Completed 200 OK in 141ms (Views: 132.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:19:58 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.7ms)
+  Rendered shared/_navbar-home.html.erb (3.0ms)
+  Rendered shared/_flashes.html.erb (1.4ms)
+Completed 200 OK in 108ms (Views: 100.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:20:51 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.0ms)
+  Rendered shared/_navbar-home.html.erb (2.3ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 10826ms (Views: 10821.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:21:43 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.6ms)
+  Rendered shared/_navbar-home.html.erb (2.5ms)
+  Rendered shared/_flashes.html.erb (1.4ms)
+Completed 200 OK in 10087ms (Views: 10082.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:22:24 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.9ms)
+  Rendered shared/_navbar-home.html.erb (5.6ms)
+  Rendered shared/_flashes.html.erb (1.2ms)
+Completed 200 OK in 13723ms (Views: 13718.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:23:08 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.2ms)
+  Rendered shared/_navbar-home.html.erb (2.9ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 10343ms (Views: 10338.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:24:27 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.4ms)
+  Rendered shared/_navbar-home.html.erb (5.0ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 10882ms (Views: 10877.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:25:13 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.9ms)
+  Rendered shared/_navbar-home.html.erb (2.9ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 10181ms (Views: 10176.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:27:21 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.0ms)
+  Rendered shared/_navbar-home.html.erb (4.0ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 15458ms (Views: 15452.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:28:22 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.2ms)
+  Rendered shared/_navbar-home.html.erb (3.0ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 10060ms (Views: 10057.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:30:08 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (11.1ms)
+  Rendered shared/_navbar-home.html.erb (2.8ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 10830ms (Views: 10818.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:31:13 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.7ms)
+  Rendered shared/_navbar-home.html.erb (3.0ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 11468ms (Views: 11462.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:31:28 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.8ms)
+  Rendered shared/_navbar-home.html.erb (2.4ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 10916ms (Views: 10910.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:32:19 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.6ms)
+  Rendered shared/_navbar-home.html.erb (3.7ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 10364ms (Views: 10359.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:33:34 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.6ms)
+  Rendered shared/_navbar-home.html.erb (3.5ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 10419ms (Views: 10413.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:34:11 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.1ms)
+  Rendered shared/_navbar-home.html.erb (4.3ms)
+  Rendered shared/_flashes.html.erb (1.4ms)
+Completed 200 OK in 11285ms (Views: 11280.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:34:57 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.3ms)
+  Rendered shared/_navbar-home.html.erb (2.6ms)
+  Rendered shared/_flashes.html.erb (7.4ms)
+Completed 200 OK in 137ms (Views: 130.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:36:17 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.4ms)
+  Rendered shared/_navbar-home.html.erb (3.0ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 10701ms (Views: 10696.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:36:42 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.9ms)
+  Rendered shared/_navbar-home.html.erb (2.1ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 81ms (Views: 75.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:37:03 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.8ms)
+  Rendered shared/_navbar-home.html.erb (1.9ms)
+  Rendered shared/_flashes.html.erb (0.8ms)
+Completed 200 OK in 80ms (Views: 76.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:37:22 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.7ms)
+  Rendered shared/_navbar-home.html.erb (2.0ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 68ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:37:47 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.1ms)
+  Rendered shared/_navbar-home.html.erb (2.0ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 70ms (Views: 65.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:39:11 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (7.5ms)
+  Rendered shared/_navbar-home.html.erb (3.9ms)
+  Rendered shared/_flashes.html.erb (1.5ms)
+Completed 200 OK in 132ms (Views: 120.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:40:00 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (3.2ms)
+  Rendered shared/_navbar-home.html.erb (3.6ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 11592ms (Views: 11587.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:40:38 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.5ms)
+  Rendered shared/_navbar-home.html.erb (3.1ms)
+  Rendered shared/_flashes.html.erb (1.2ms)
+Completed 200 OK in 10328ms (Views: 10323.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:44:11 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (12.3ms)
+  Rendered shared/_navbar-home.html.erb (5.6ms)
+  Rendered shared/_flashes.html.erb (1.7ms)
+Completed 200 OK in 199ms (Views: 188.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:44:35 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.0ms)
+  Rendered shared/_navbar-home.html.erb (3.2ms)
+  Rendered shared/_flashes.html.erb (1.7ms)
+Completed 200 OK in 95ms (Views: 89.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:44:49 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.5ms)
+  Rendered shared/_navbar-home.html.erb (2.2ms)
+  Rendered shared/_flashes.html.erb (3.2ms)
+Completed 200 OK in 88ms (Views: 83.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:47:23 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.1ms)
+  Rendered shared/_navbar-home.html.erb (2.2ms)
+  Rendered shared/_flashes.html.erb (2.5ms)
+Completed 200 OK in 87ms (Views: 82.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:47:40 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.0ms)
+  Rendered shared/_navbar-home.html.erb (3.3ms)
+  Rendered shared/_flashes.html.erb (1.2ms)
+Completed 200 OK in 11497ms (Views: 11492.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:48:11 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.8ms)
+  Rendered shared/_navbar-home.html.erb (2.5ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 107ms (Views: 101.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:49:06 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.5ms)
+  Rendered shared/_navbar-home.html.erb (2.0ms)
+  Rendered shared/_flashes.html.erb (0.8ms)
+Completed 200 OK in 74ms (Views: 70.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:49:22 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.0ms)
+  Rendered shared/_navbar-home.html.erb (1.8ms)
+  Rendered shared/_flashes.html.erb (0.8ms)
+Completed 200 OK in 74ms (Views: 69.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:50:03 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.3ms)
+  Rendered shared/_navbar-home.html.erb (2.0ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 74ms (Views: 69.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:51:33 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (7.3ms)
+  Rendered shared/_navbar-home.html.erb (2.8ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 11308ms (Views: 11299.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:51:58 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (3.4ms)
+  Rendered shared/_navbar-home.html.erb (3.2ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 11752ms (Views: 11745.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:52:44 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.2ms)
+  Rendered shared/_navbar-home.html.erb (3.2ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 10447ms (Views: 10442.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 12:54:08 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.5ms)
+  Rendered shared/_navbar-home.html.erb (1.5ms)
+  Rendered shared/_flashes.html.erb (0.7ms)
+Completed 200 OK in 59ms (Views: 54.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:00:13 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (25.1ms)
+  Rendered shared/_navbar-home.html.erb (8.9ms)
+  Rendered shared/_flashes.html.erb (10.2ms)
+Completed 200 OK in 319ms (Views: 303.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:01:30 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (15.6ms)
+  Rendered shared/_navbar-home.html.erb (6.2ms)
+  Rendered shared/_flashes.html.erb (1.8ms)
+Completed 200 OK in 257ms (Views: 243.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:01:42 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.0ms)
+  Rendered shared/_navbar-home.html.erb (2.6ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 108ms (Views: 103.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:02:35 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.9ms)
+  Rendered shared/_navbar-home.html.erb (2.9ms)
+  Rendered shared/_flashes.html.erb (1.6ms)
+Completed 200 OK in 109ms (Views: 104.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:04:07 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (48.3ms)
+  Rendered shared/_navbar-home.html.erb (3.1ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 13497ms (Views: 13486.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:08:30 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.8ms)
+  Rendered shared/_navbar-home.html.erb (2.0ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 66ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:20:16 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (10.1ms)
+  Rendered shared/_navbar-home.html.erb (6.6ms)
+  Rendered shared/_flashes.html.erb (2.7ms)
+Completed 200 OK in 204ms (Views: 194.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:21:02 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.0ms)
+  Rendered shared/_navbar-home.html.erb (5.3ms)
+  Rendered shared/_flashes.html.erb (1.4ms)
+Completed 200 OK in 129ms (Views: 122.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:22:56 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (7.7ms)
+  Rendered shared/_navbar-home.html.erb (6.7ms)
+  Rendered shared/_flashes.html.erb (2.2ms)
+Completed 200 OK in 217ms (Views: 209.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:23:45 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (23.2ms)
+  Rendered shared/_navbar-home.html.erb (19.9ms)
+  Rendered shared/_flashes.html.erb (9.2ms)
+Completed 200 OK in 530ms (Views: 517.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:23:52 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (3.4ms)
+  Rendered shared/_navbar-home.html.erb (4.7ms)
+  Rendered shared/_flashes.html.erb (2.3ms)
+Completed 200 OK in 127ms (Views: 123.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:24:58 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (21.1ms)
+  Rendered shared/_navbar-home.html.erb (26.1ms)
+  Rendered shared/_flashes.html.erb (22.5ms)
+Completed 200 OK in 443ms (Views: 429.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:25:33 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (5.6ms)
+  Rendered shared/_navbar-home.html.erb (5.2ms)
+  Rendered shared/_flashes.html.erb (3.6ms)
+Completed 200 OK in 194ms (Views: 189.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:27:18 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.4ms)
+  Rendered shared/_navbar-home.html.erb (4.4ms)
+  Rendered shared/_flashes.html.erb (1.3ms)
+Completed 200 OK in 12103ms (Views: 12097.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:28:01 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (5.5ms)
+  Rendered shared/_navbar-home.html.erb (2.6ms)
+  Rendered shared/_flashes.html.erb (1.2ms)
+Completed 200 OK in 154ms (Views: 148.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:28:09 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.8ms)
+  Rendered shared/_navbar-home.html.erb (2.8ms)
+  Rendered shared/_flashes.html.erb (0.8ms)
+Completed 200 OK in 90ms (Views: 85.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:28:18 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.4ms)
+  Rendered shared/_navbar-home.html.erb (2.1ms)
+  Rendered shared/_flashes.html.erb (1.2ms)
+Completed 200 OK in 73ms (Views: 68.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:30:05 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.5ms)
+  Rendered shared/_navbar-home.html.erb (1.5ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 70ms (Views: 65.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:31:02 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.2ms)
+  Rendered shared/_navbar-home.html.erb (3.5ms)
+  Rendered shared/_flashes.html.erb (1.2ms)
+Completed 200 OK in 11966ms (Views: 11961.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:31:34 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.9ms)
+  Rendered shared/_navbar-home.html.erb (3.3ms)
+  Rendered shared/_flashes.html.erb (1.0ms)
+Completed 200 OK in 10304ms (Views: 10298.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:36:58 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1002.0ms)
+Completed 500 Internal Server Error in 1024ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `link_to_image' for #<#<Class:0x00007fc093bc0e20>:0x00007fc09c48f968>
+Did you mean?  link_to_if
+               link_to
+               link_to_prev_page
+               link_to_next_page
+               url_to_image):
+    156:     <div class="liens-utiles">
+    157:       <div class="col-md-3 logo-links">
+    158:         <!-- <img src="http://res.cloudinary.com/ddjlhkips/image/upload/c_scale,w_150/v1517404928/te%CC%81le%CC%81chargement_ooqtyx.png"> -->
+    159:         <%= link_to_image("http://res.cloudinary.com/ddjlhkips/image/upload/c_scale,w_150/v1517404928/te%CC%81le%CC%81chargement_ooqtyx.png", "www.google.fr") %>
+    160:       </div>
+    161:       <div class="col-md-3 logo-links">
+    162:         <img src="http://res.cloudinary.com/ddjlhkips/image/upload/c_scale,w_150/v1517404941/afcdp_e6oujr.png">
+  
+app/views/pages/home.html.erb:159:in `_app_views_pages_home_html_erb__3901812479085325232_70232597169280'
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.5ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (180.4ms)
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:37:22 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (6.2ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of String into Hash):
+    156:     <div class="liens-utiles">
+    157:       <div class="col-md-3 logo-links">
+    158:         <!-- <img src="http://res.cloudinary.com/ddjlhkips/image/upload/c_scale,w_150/v1517404928/te%CC%81le%CC%81chargement_ooqtyx.png"> -->
+    159:         <%= url_to_image("http://res.cloudinary.com/ddjlhkips/image/upload/c_scale,w_150/v1517404928/te%CC%81le%CC%81chargement_ooqtyx.png", "www.google.fr") %>
+    160:       </div>
+    161:       <div class="col-md-3 logo-links">
+    162:         <img src="http://res.cloudinary.com/ddjlhkips/image/upload/c_scale,w_150/v1517404941/afcdp_e6oujr.png">
+  
+app/views/pages/home.html.erb:159:in `_app_views_pages_home_html_erb__3901812479085325232_70232615327140'
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.6ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/Valentin/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (168.5ms)
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:38:06 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (1.2ms)
+  Rendered shared/_navbar-home.html.erb (1.7ms)
+  Rendered shared/_flashes.html.erb (0.6ms)
+Completed 200 OK in 56ms (Views: 51.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:39:10 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (10.8ms)
+  Rendered shared/_navbar-home.html.erb (4.4ms)
+  Rendered shared/_flashes.html.erb (1.8ms)
+Completed 200 OK in 140ms (Views: 131.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:40:01 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.7ms)
+  Rendered shared/_navbar-home.html.erb (3.0ms)
+  Rendered shared/_flashes.html.erb (1.2ms)
+Completed 200 OK in 172ms (Views: 166.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:42:07 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (28.0ms)
+  Rendered shared/_navbar-home.html.erb (9.1ms)
+  Rendered shared/_flashes.html.erb (25.8ms)
+Completed 200 OK in 340ms (Views: 323.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:42:53 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (2.6ms)
+  Rendered shared/_navbar-home.html.erb (21.0ms)
+  Rendered shared/_flashes.html.erb (1.6ms)
+Completed 200 OK in 166ms (Views: 160.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 14:43:10 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/public
+  Rendered pages/home.html.erb within layouts/public (4.4ms)
+  Rendered shared/_navbar-home.html.erb (3.3ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+Completed 200 OK in 84ms (Views: 79.9ms | ActiveRecord: 0.0ms)
+
+

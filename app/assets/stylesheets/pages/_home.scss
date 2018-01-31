@@ -228,8 +228,89 @@ h3 {
 	}
 }
 
+//Banner 4 - Un accompagnement vers la conformité
+.third-step-content {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: $banner-gray;
+  width: 100%;
+	h1 {
+		font-style: Montserrat;
+	  font-style: bolder;
+	  color: $text-header;
+	  font-size: 26px;
+	  text-align: center;
+		padding-bottom: 25px;
+	}
+	.feature {
+		h1 {
+			margin-left: 10px;
+			text-align: left;
+			font-style: bolder;
+		  color: $text-header;
+		  font-size: 20px;
+			padding-bottom: 10px;
+		}
+		p {
+			font-style: Montserrat;
+	    font-style: lighter;
+	    color: $text;
+	    font-size: 13px;
+		}
+	}
+	.feature-header {
+		display: flex;
+		align-items: center;
+		img {
+			width: 30px;
+			height: 30px;
+		}
+	}
+}
 
-//Banner 4 - Notre plateforme
+.icon-vert {
+	margin-top: 25px;
+	.row {
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+}
+
+.icon-vert-img {
+	display: flex;
+	justify-content: flex-end;
+  align-items: center;
+}
+
+.icon-vert-text {
+	display: flex;
+	justify-content: flex-start;
+  align-items: center;
+}
+
+.icon-vert-text p {
+	color: #898EA2;
+}
+
+@media only screen and (max-width : 768px) {
+	.icon-vert-img {
+		display: flex;
+		justify-content: center;
+	  align-items: center;
+	}
+	.icon-vert-text {
+		display: flex;
+		justify-content: center;
+	  align-items: center;
+	}
+	.icon-vert-text p {
+			margin: 10px;
+			padding-bottom: 10px;
+			text-align: center;
+		}
+}
+
+//Banner 5 - Notre plateforme
 .banner-plateforme-feature {
   flex-grow: 1;
   width: 98%;
@@ -241,10 +322,10 @@ h3 {
 	margin-left: 5%;
 }
 
-.third-step-content {
+.third-step-content-white {
   padding-top: 80px;
   padding-bottom: 80px;
-  background-color: $banner-gray;
+  background-color: white;
   width: 100%;
 	h1 {
 		font-style: Montserrat;
@@ -287,7 +368,17 @@ h3 {
 	}
 }
 
-//Banner 5 - Nous contacter
+//Banner liens UTILES
+.logo-links {
+	display: flex;
+	justify-content: center;
+}
+
+.liens-utiles {
+	padding-top: 45px;
+}
+
+//Banner 6 - Nous contacter
 .fourth-step-content {
   padding-top: 80px;
   padding-bottom: 80px;
